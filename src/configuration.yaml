@@ -1,0 +1,14 @@
+default_config:
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+sensor: !include sensors.yaml
+frontend: !include frontend.yaml
+utility_meter: !include utility_meters.yaml
+vacuum: !include vacuums.yaml
+switch: !include switches.yaml
+remote: !include remotes.yaml
+input_selects: !include input_selects.yaml
+input_boolean: !include input_booleans.yaml
+yahoofinance: !include yahoofinance.yaml
+influxdb: !include influxdb.yaml

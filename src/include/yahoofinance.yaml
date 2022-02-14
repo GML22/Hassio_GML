@@ -1,0 +1,41 @@
+symbols:
+  - PLN=X
+  - EURPLN=X
+  - GBPPLN=X
+  - EURUSD=X
+  - GBPUSD=X
+  - BTC-USD
+  - ETH-USD
+  - DOGE-USD
+  - SOL-USD
+  - WIG20.WA
+  - WIG.WA
+  - ^GSPC
+  - ^DJI
+  - ^FTSE
+  - ^GDAXI
+  - ^N225
+  - 000001.SS
+  - GC=F
+  - SI=F
+  - HG=F
+  - BZ=F
+  - AAPL
+  - MSFT
+  - GOOG
+  - FB
+  - AMZN
+  - TSLA
+  - BRK-B
+  - JPM
+  - 2222.SR
+  - 0700.HK
+  - 9988.HK
+  - 2330.TW
+  - 005930.KS
+  - MC.PA
+  - PKO.WA
+  - CDR.WA
+scan_interval:
+  seconds: 30
+decimal_places: 4

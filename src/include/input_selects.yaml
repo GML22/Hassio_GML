@@ -1,0 +1,18 @@
+# Xiaomi Roborock S6
+vacuum_room:
+  options:
+    - Wybierz pokój
+    - Salon
+    - Kuchnia
+    - Łazienka
+    - Przedpokój
+    - Drugi pokój
+
+vacuum_mode:
+  name: Tryb pracy
+  options:
+    - Silent
+    - Standard
+    - Medium
+    - Turbo
+    - Gentle

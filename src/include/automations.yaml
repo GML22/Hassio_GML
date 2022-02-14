@@ -1,0 +1,63 @@
+# Xiaomi Roborock S6
+- alias: Start Cleaning Room
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: input_select.vacuum_room
+    from: 'Select Input'
+  action:
+  - service: script.turn_on
+    data_template:
+      entity_id: >
+        {% if is_state("input_select.vacuum_room", "Salon") %}
+          script.vacuum_salon
+        {% elif is_state("input_select.vacuum_room", "Kuchnia") %}
+          script.vacuum_kuchnia
+        {% elif is_state("input_select.vacuum_room", "Łazienka") %}
+          script.vacuum_lazienka
+        {% elif is_state("input_select.vacuum_room", "Przedpokój") %}
+          script.vacuum_przedpokoj
+        {% elif is_state("input_select.vacuum_room", "Drugi pokój") %}
+          script.vacuum_drugi_pokoj
+        {% else %}
+        {% endif %}
+  - service: input_select.select_option
+    entity_id: input_select.vacuum_room
+    data_template:
+      option: "Select Input"
+
+- alias: Select operation mode by input select
+  trigger:
+    entity_id: input_select.vacuum_mode
+    platform: state
+  action:
+    service: vacuum.set_fan_speed
+    data_template:
+      entity_id: vacuum.vacuum
+      fan_speed: '{{ states.input_select.vacuum_mode.state }}'
+
+- alias: Monitor operation mode and update input select
+  trigger:
+    platform: state
+    entity_id: vacuum.vacuum
+  action:
+    service: input_select.select_option
+    entity_id: input_select.vacuum_mode
+    data_template:
+      option: '{{ states.vacuum.vacuum.attributes.fan_speed }}'
+
+# LG washer-dryer
+- id: 'washer_notification'
+  alias: Washer notification
+  description: Alert when washer finishes
+  trigger:
+  - entity_id: binary_sensor.pralka_wash_completed
+    platform: state
+    from: 'off'
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      title: 'Pranie skończone!'
+      message: 'Wyjmij pranie póki jest ciepłe!'
+    service: notify.notify

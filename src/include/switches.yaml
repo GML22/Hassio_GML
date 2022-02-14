@@ -1,0 +1,206 @@
+- platform: template
+  switches:
+    # Harmony Hub Remote
+    # TV
+    tv:
+      friendly_name: TV
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'TV') }}"
+      turn_on:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'TV'
+      turn_off:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'PowerOff'
+
+    # Movie on TV
+    tv_movie:
+      friendly_name: Movie on TV
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Movie on TV') }}"
+      turn_on:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'Movie on TV'
+      turn_off:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'PowerOff'
+
+    # Play Station TV
+    ps4_tv:
+      friendly_name: Play Station TV
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Play Station TV') }}"
+      turn_on:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'Play Station TV'
+      turn_off:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'PowerOff'
+
+    # Play Station Optoma
+    ps4_optoma:
+      friendly_name: Play Station Optoma
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Play Station Optoma') }}"
+      turn_on:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'Play Station Optoma'
+      turn_off:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'PowerOff'
+
+    # Raspberry Movie
+    rpi_movie:
+      friendly_name: Raspberry Movie
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Raspberry Movie') }}"
+      turn_on:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'Raspberry Movie'
+      turn_off:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'PowerOff'
+
+
+    # Yamaha Gramophone
+    yamh_grmph:
+      friendly_name: Yamaha Gramophone
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Yamaha Gramophone') }}"
+      turn_on:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'Yamaha Gramophone'
+      turn_off:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'PowerOff'
+
+    # Yamaha Bluetooth
+    yamh_blth:
+      friendly_name: Yamaha Bluetooth
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Yamaha Bluetooth') }}"
+      turn_on:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'Yamaha Bluetooth'
+      turn_off:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'PowerOff'
+
+    # Yamaha Radio
+    yamh_radio:
+      friendly_name: Yamaha Radio
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Yamaha Radio') }}"
+      turn_on:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'Yamaha Radio'
+      turn_off:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'PowerOff'
+
+    # Yamaha Internet Radio
+    yamh_int_radio:
+      friendly_name: Yamaha Internet Radio
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Yamaha Internet Radio') }}"
+      turn_on:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'Yamaha Internet Radio'
+      turn_off:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'PowerOff'
+
+    # Chromecast
+    chromecast:
+      friendly_name: Chromecast
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Chromecast') }}"
+      turn_on:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'Chromecast'
+      turn_off:
+        service: remote.turn_on
+        data:
+          entity_id: remote.harmony_hub
+          activity: 'PowerOff'
+
+    harmony_hub_status:
+      friendly_name: Harmony Hub status
+      value_template: "{{ not is_state_attr('remote.harmony_hub', 'current_activity', 'PowerOff')  }}"
+      turn_on:
+          service: switch.turn_on
+      turn_off:
+          service: switch.turn_off
+
+    # Philips Hue Lights
+    all_hue_lights_status:
+      friendly_name: All hue lights status
+      value_template: "{{ is_state('light.kitche_leds', 'on') or is_state('light.kitchen', 'on') or is_state('light.salon', 'on') or is_state('light.hall',  'on') or is_state('light.bathroom', 'on') }}"
+      turn_on:
+          service: switch.turn_on
+      turn_off:
+          service: switch.turn_off
+   
+    # LG Washer-Dryer
+    lg_washer_status:
+      friendly_name: LG washer status
+      value_template: "{{ is_state('sensor.pralka', 'on') }}"
+      turn_on:
+          service: switch.turn_on
+      turn_off:
+          service: switch.turn_off
+
+    # NAS TS-453Be
+    nas_server_status:
+      friendly_name: NAS server status
+      value_template: "{{ is_state('sensor.gml_nas_smart_status_drive_0_3', 'OK') }}"
+      turn_on:
+          service: switch.turn_on
+      turn_off:
+          service: switch.turn_off
+
+    # PS4 Pro
+    ps4_status:
+      friendly_name: Play Station 4 status
+      value_template: "{{ is_state('media_player.playstation_4', 'idle')}}"
+      turn_on:
+          service: switch.turn_on
+      turn_off:
+          service: switch.turn_off
+
+    # Optoma GT1080e
+    optoma_status:
+      friendly_name: Optoma status
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Play Station Optoma') or is_state_attr('remote.harmony_hub', 'current_activity', 'Raspberry Movie') }}"
+      turn_on:
+          service: switch.turn_on
+      turn_off:
+          service: switch.turn_off

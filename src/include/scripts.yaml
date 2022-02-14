@@ -1,0 +1,775 @@
+# Xiaomi Roborock S6
+vacuum_salon:
+      alias: "Vacuum Salon"
+      sequence:
+        - service: vacuum.send_command
+          data:
+            entity_id: vacuum.vacuum
+            command: app_zoned_clean
+            params: [[22065,21231,26515,24681,3]]
+vacuum_kuchnia:
+      alias: "Vacuum Kuchnia"
+      sequence:
+        - service: vacuum.send_command
+          data:
+            entity_id: vacuum.vacuum
+            command: app_zoned_clean
+            params: [[26521,21212,29221,23962,3]]
+vacuum_lazienka:
+      alias: "Vacuum Łazienka"
+      sequence:
+        - service: vacuum.send_command
+          data:
+            entity_id: vacuum.vacuum
+            command: app_zoned_clean
+            params: [[27611,25391,29061,27041,3]]
+vacuum_przedpokoj:
+      alias: "Vacuum Przedpokój"
+      sequence:
+        - service: vacuum.send_command
+          data:
+            entity_id: vacuum.vacuum
+            command: app_zoned_clean
+            params: [[26593,23929,30093,25429,3]]
+vacuum_drugi_pokoj:
+      alias: "Vacuum Drugi Pokój"
+      sequence:
+        - service: vacuum.send_command
+          data:
+            entity_id: vacuum.vacuum
+            command: app_zoned_clean
+            params: [[22757,24587,26657,26987,3]]
+
+# Pilot TV
+tv_on_off:
+  alias: Turn on TV
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: PowerToggle
+        device: xxx
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: PowerToggle
+        device: xxx
+
+button_0:
+  alias: Turn 0
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: 0
+        device: xxx
+
+button_1:
+  alias: Turn 1    
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: 1          
+        device: xxx
+
+button_2:
+  alias: Turn 2    
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: 2          
+        device: xxx
+
+button_3:
+  alias: Turn 3    
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: 3          
+        device: xxx
+
+button_4:
+  alias: Turn 4    
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: 4          
+        device: xxx
+
+button_5:
+  alias: Turn 5    
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: 5          
+        device: xxx
+
+button_6:
+  alias: Turn 6    
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: 6          
+        device: xxx
+
+button_7:
+  alias: Turn 7    
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: 7          
+        device: xxx
+
+button_8:
+  alias: Turn 8    
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: 8          
+        device: xxx
+
+button_9:
+  alias: Turn 9    
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: 9          
+        device: xxx
+
+button_ok:
+  alias: Press OK
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Select
+        device: xxx
+
+button_mute:
+  alias: Press mute
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Mute
+        device: xxx
+
+button_volume_up:
+  alias: Press volume up
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: VolumeUp
+        device: xxx
+
+button_volume_down:
+  alias: Press volume down
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: VolumeDown
+        device: xxx
+
+button_channel_up:
+  alias: Press channel up
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: ChannelUp
+        device: xxx
+
+button_channel_down:
+  alias: Press channel down
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: ChannelDown
+        device: xxx
+
+button_direction_left:
+  alias: Press direction left
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: DirectionLeft
+        device: xxx
+
+button_direction_up:
+  alias: Press direction up
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: DirectionUp
+        device: xxx
+
+button_direction_right:
+  alias: Press direction right
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: DirectionRight
+        device: xxx
+
+button_direction_down:
+  alias: Press direction down
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: DirectionDown
+        device: xxx
+
+button_menu:
+  alias: Press menu
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Menu
+        device: xxx
+
+button_back:
+  alias: Press back
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Back
+        device: xxx
+
+button_guide:
+  alias: Press guide
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Guide
+        device: xxx
+
+button_info:
+  alias: Press info
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Info
+        device: xxx
+
+# Yamaha 
+yamaha_on_off:
+  alias: Yamaha On Off
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: PowerToggle
+        device: xxx
+
+yamaha_volume_up:
+  alias: Yamaha volume up
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: VolumeUp
+        device: xxx
+
+yamaha_volume_down:
+  alias: Yamaha volume down
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: VolumeDown
+        device: xxx
+
+yamaha_volume_mute:
+  alias: Yamaha volume mute
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Mute
+        device: xxx
+
+yamaha_bluetooth:
+  alias: Yamaha bluetooth  
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: InputBluetooth 
+        device: xxx
+
+yamaha_net_radio:
+  alias: Yamaha net radio
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: InputNet
+        device: xxx
+
+yamaha_optical1:
+  alias: Yamaha optical 1
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: InputOptical1 
+        device: xxx
+
+yamaha_optical2:
+  alias: Yamaha optical 2
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: InputOptical2 
+        device: xxx
+
+yamaha_phono:
+  alias: Yamaha phono
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: InputPhono
+        device: xxx
+
+yamaha_tuner:
+  alias: Yamaha tuner
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: InputTuner
+        device: xxx
+
+# Harmony Hub Remote
+harmony_chromecast:
+  alias: Harmony Chromecast
+  sequence:
+    - service_template: >
+        {% if is_state_attr('remote.harmony_hub', 'current_activity', 'Chromecast') %}
+          remote.turn_off
+        {% else %}
+          remote.turn_on
+        {% endif %}
+      data:
+        entity_id: remote.harmony_hub
+        activity: 'Chromecast'
+
+harmony_yamaha_bluetooth:
+  alias: Harmony Yamaha Bluetooth
+  sequence:
+    - service_template: >
+        {% if is_state_attr('remote.harmony_hub', 'current_activity', 'Yamaha Bluetooth') %}
+          remote.turn_off
+        {% else %}
+          remote.turn_on
+        {% endif %}
+      data:
+        entity_id: remote.harmony_hub
+        activity: 'Yamaha Bluetooth'
+
+harmony_yamaha_radio:
+  alias: Harmony Yamaha Radio
+  sequence:
+    - service_template: >
+        {% if is_state_attr('remote.harmony_hub', 'current_activity', 'Yamaha Radio') %}
+          remote.turn_off
+        {% else %}
+          remote.turn_on
+        {% endif %}
+      data:
+        entity_id: remote.harmony_hub
+        activity: 'Yamaha Radio'
+
+harmony_yamaha_internet_radio:
+  alias: Harmony Yamaha Internet Radio
+  sequence:
+    - service_template: >
+        {% if is_state_attr('remote.harmony_hub', 'current_activity', 'Yamaha Internet Radio') %}
+          remote.turn_off
+        {% else %}
+          remote.turn_on
+        {% endif %}
+      data:
+        entity_id: remote.harmony_hub
+        activity: 'Yamaha Internet Radio'
+
+harmony_yamaha_gramophone:
+  alias: Harmony Yamaha Gramophone
+  sequence:
+    - service_template: >
+        {% if is_state_attr('remote.harmony_hub', 'current_activity', 'Yamaha Gramophone') %}
+          remote.turn_off
+        {% else %}
+          remote.turn_on
+        {% endif %}
+      data:
+        entity_id: remote.harmony_hub
+        activity: 'Yamaha Gramophone'
+
+harmony_rpi_movie:
+  alias: Harmony RPi Movie
+  sequence:
+    - service_template: >
+        {% if is_state_attr('remote.harmony_hub', 'current_activity', 'Raspberry Movie') %}
+          remote.turn_off
+        {% else %}
+          remote.turn_on
+        {% endif %}
+      data:
+        entity_id: remote.harmony_hub
+        activity: 'Raspberry Movie'
+
+harmony_ps_optoma:
+  alias: Harmony PS4 Optoma
+  sequence:
+    - service_template: >
+        {% if is_state_attr('remote.harmony_hub', 'current_activity', 'Play Station Optoma') %}
+          remote.turn_off
+        {% else %}
+          remote.turn_on
+        {% endif %}
+      data:
+        entity_id: remote.harmony_hub
+        activity: 'Play Station Optoma'
+
+harmony_ps_tv:
+  alias: Harmony PS4 TV
+  sequence:
+    - service_template: >
+        {% if is_state_attr('remote.harmony_hub', 'current_activity', 'Play Station TV') %}
+          remote.turn_off
+        {% else %}
+          remote.turn_on
+        {% endif %}
+      data:
+        entity_id: remote.harmony_hub
+        activity: 'Play Station TV'
+
+harmony_movie_tv:
+  alias: Harmony Movie TV
+  sequence:
+    - service_template: >
+        {% if is_state_attr('remote.harmony_hub', 'current_activity', 'Movie on TV') %}
+          remote.turn_off
+        {% else %}
+          remote.turn_on
+        {% endif %}
+      data:
+        entity_id: remote.harmony_hub
+        activity: 'Movie on TV'
+
+harmony_tv:
+  alias: Harmony TV
+  sequence:
+    - service_template: >
+        {% if is_state_attr('remote.harmony_hub', 'current_activity', 'TV')  %}
+          remote.turn_off
+        {% else %}
+          remote.turn_on
+        {% endif %}
+      data:
+        entity_id: remote.harmony_hub
+        activity: 'TV'
+
+# Philips Hue Lights
+salon_hue:
+  alias: Hue Lights Salon
+  sequence:
+    - service_template: >
+        {% if is_state('light.salon', 'on')  %}
+          light.turn_off
+        {% else %}
+          light.turn_on
+        {% endif %}
+      data:
+        entity_id: light.salon
+
+hall_hue:
+  alias: Hue Lights Hall
+  sequence:
+    - service_template: >
+        {% if is_state('light.hall', 'on')  %}
+          light.turn_off
+        {% else %}
+          light.turn_on
+        {% endif %}
+      data:
+        entity_id: light.hall
+
+bathroom_hue:
+  alias: Hue Lights Bathroom
+  sequence:
+    - service_template: >
+        {% if is_state('light.bathroom', 'on')  %}
+          light.turn_off
+        {% else %}
+          light.turn_on
+        {% endif %}
+      data:
+        entity_id: light.bathroom
+
+kitchen_hue:
+  alias: Hue Lights Kitchen
+  sequence:
+    - service_template: >
+        {% if is_state('light.kitchen', 'on')  %}
+          light.turn_off
+        {% else %}
+          light.turn_on
+        {% endif %}
+      data:
+        entity_id: light.kitchen
+
+kitche_leds_hue:
+  alias: Hue Lights Kitchen Leds
+  sequence:
+    - service_template: >
+        {% if is_state('light.kitche_leds', 'on')  %}
+          light.turn_off
+        {% else %}
+          light.turn_on
+        {% endif %}
+      data:
+        entity_id: light.kitche_leds
+
+all_hue_lights_off:
+  alias: Turn off all hue lights
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id: light.kitche_leds
+    - service: light.turn_off     
+      data:
+        entity_id: light.kitchen
+    - service: light.turn_off     
+      data:
+        entity_id: light.hall
+    - service: light.turn_off     
+      data:
+        entity_id: light.salon
+    - service: light.turn_off     
+      data:
+        entity_id: light.bathroom
+
+harmony_hub_turn_off:
+  alias: Turn off Harmony Hub activity
+  sequence:
+    - service: remote.turn_off
+      data:
+        entity_id: remote.harmony_hub
+
+# PS4 Pro
+ps4_turn_on_off:
+  alias: Play Station Power On / Off
+  sequence:
+    - service_template: >
+        {% if is_state('media_player.playstation_4', 'idle')  %}
+          media_player.turn_off
+        {% else %}
+          media_player.turn_on
+        {% endif %}
+      data:
+        entity_id: media_player.playstation_4
+
+ps4_button_direction_left:
+  alias: PS4 press direction left
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: DirectionLeft
+        device: xxx
+
+ps4_button_direction_up:
+  alias: PS4 press direction up
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: DirectionUp
+        device: xxx
+
+ps4_button_direction_right:
+  alias: PS4 press direction right
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: DirectionRight
+        device: xxx
+
+ps4_button_direction_down:
+  alias: PS4 press direction down
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: DirectionDown
+        device: xxx
+
+ps4_button_ok:
+  alias: PS4 press OK
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: OK
+        device: xxx
+
+ps4_square:
+  alias: PS4 square button
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Square
+        device: xxx
+
+ps4_triangle:
+  alias: PS4 triangle button
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Triangle
+        device: xxx
+
+ps4_circle:
+  alias: PS4 circle button
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Circle
+        device: xxx
+
+ps4_cross:
+  alias: PS4 cross button
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Cross
+        device: xxx
+
+ps4_button_back:
+  alias: PS4 press back
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Back
+        device: xxx
+
+ps4_options:
+  alias: PS4 options
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Options
+        device: xxx
+
+ps4_button:
+  alias: PS4 button   
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: PS
+        device: xxx
+
+# Optoma GT1080e
+optoma_direction_up:
+  alias: Optoma direction up
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: DirectionUp
+        device: xxx
+
+optoma_direction_right:
+  alias: Optoma direction right
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: DirectionRight
+        device: xxx
+
+optoma_direction_down:
+  alias: Optoma direction down
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: DirectionDown
+        device: xxx
+
+optoma_direction_left:
+  alias: Optoma direction left
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: DirectionLeft
+        device: xxx
+
+optoma_select:
+  alias: Optoma select
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Select
+        device: xxx
+
+optoma_menu:
+  alias: Optoma menu
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Menu
+        device: xxx
+
+optoma_source:
+  alias: Optoma source
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Source  
+        device: xxx
+
+optoma_mute:
+  alias: Optoma mute
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        command: Mute  
+        device: xxx

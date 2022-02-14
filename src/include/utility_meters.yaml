@@ -1,0 +1,119 @@
+# Energia elektryczna zużycie
+hourly_energy:
+  source: sensor.licznik_pradu
+  name: Hourly Energy 
+  cycle: hourly
+daily_energy:
+  source: sensor.licznik_pradu
+  name: Daily Energy
+  cycle: daily
+weekly_energy:
+  source: sensor.licznik_pradu
+  name: Weekly Energy
+  cycle: weekly
+monthly_energy:
+  source: sensor.licznik_pradu
+  name: Monthly Energy
+  cycle: monthly
+quarterly_energy:
+  source: sensor.licznik_pradu
+  name: Quaterly Energy
+  cycle: quarterly
+yearly_energy:
+  source: sensor.licznik_pradu
+  name: Yearly Energy
+  cycle: yearly
+
+# Woda zużycie
+qhly_water:
+  source: sensor.total_water
+  name: Quarter-Hourly Water
+  cycle: quarter-hourly
+hly_water:
+  source: sensor.total_water
+  name: HWater
+  cycle: hourly
+dly_water:
+  source: sensor.total_water
+  name: Daily Water
+  cycle: daily
+wly_water:
+  source: sensor.total_water
+  name: Weekly Water
+  cycle: weekly
+mly_water:
+  source: sensor.total_water
+  name: Monthly Water
+  cycle: monthly
+qly_water:
+  source: sensor.total_water
+  name: Quarterly Water
+  cycle: quarterly
+yly_water:
+  source: sensor.total_water
+  name: Yearly Water
+  cycle: yearly
+
+# Koronawirus
+daily_coronavirus_confirmed:
+  source: sensor.poland_coronavirus_confirmed
+  cycle: daily
+weekly_coronavirus_confirmed:
+  source: sensor.poland_coronavirus_confirmed
+  cycle: weekly
+monthly_coronavirus_confirmed:
+  source: sensor.poland_coronavirus_confirmed
+  cycle: monthly
+daily_coronavirus_current:
+  source: sensor.poland_coronavirus_current
+  cycle: daily
+weekly_coronavirus_current:
+  source: sensor.poland_coronavirus_current
+  cycle: weekly
+monthly_coronavirus_current:
+  source: sensor.poland_coronavirus_current
+  cycle: monthly
+daily_coronavirus_deaths:
+  source: sensor.poland_coronavirus_deaths  
+  cycle: daily
+weekly_coronavirus_deaths:
+  source: sensor.poland_coronavirus_deaths  
+  cycle: weekly
+monthly_coronavirus_deaths:
+  source: sensor.poland_coronavirus_deaths  
+  cycle: monthly
+daily_coronavirus_recovered:
+  source: sensor.poland_coronavirus_recovered  
+  cycle: daily
+weekly_coronavirus_recovered:
+  source: sensor.poland_coronavirus_recovered   
+  cycle: weekly
+monthly_coronavirus_recovered:
+  source: sensor.poland_coronavirus_recovered   
+  cycle: monthly
+
+# Gaz zużycie
+hourly_gaz:
+  source: sensor.licznik_gazu
+  name: HGas
+  cycle: hourly
+daily_gaz:
+  source: sensor.licznik_gazu
+  name: Daily Gas
+  cycle: daily
+weekly_gaz:
+  source: sensor.licznik_gazu
+  name: Weekly Gas
+  cycle: weekly
+monthly_gaz:
+  source: sensor.licznik_gazu
+  name: Monthly Gas
+  cycle: monthly
+quarterly_gaz:
+  source: sensor.licznik_gazu
+  name: Quarterly Gas
+  cycle: quarterly
+yearly_gaz:
+  source: sensor.licznik_gazu
+  name: Yearly Gas
+  cycle: yearly

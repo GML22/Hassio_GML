@@ -1,0 +1,10 @@
+# Xiaomi Roborock S6
+daily_vacuum_first_run:
+  name: Daily Vacuum First Run
+  initial: 'off'
+disable_daily_vacuum:
+  name: Disable Daily Vacuum Automation
+  initial: 'off'
+disable_dustbin_notification:
+  name: Disable Dustbin Notification
+  initial: 'off'

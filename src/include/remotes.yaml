@@ -1,0 +1,4 @@
+- platform: harmony
+  name: Harmony Hub
+  host: !secret harmony_host
+  activity: !secret harmony_activity
