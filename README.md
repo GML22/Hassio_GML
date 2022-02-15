@@ -2,7 +2,7 @@
 <p align="justify">
 My own configuration of Home Assistant for monitoring energy, water and gas consumption, controlling smart devices and tracking all kinds of statistics. Home Assistant OS 7.2 is installed through QNAP Virtualization Station 3 on a QNAP TS-453Be NAS server.</p>
 
-## Lovelace UI
+## Lovelace UI:
 ### Main panel
 <p align="center">
   <img width=75% height=75% src="/images/Main_panel.gif"/>
