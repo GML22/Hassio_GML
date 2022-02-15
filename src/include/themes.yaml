@@ -19,7 +19,7 @@ dark-mode:
   primary-text-color: "#FFF"
   secondary-text-color: "#d3d3d3"
   text-primary-color: "#FFF"
-  disabled-text-color: "#555"  # XXX: https://github.com/basnijholt/lovelace-ios-dark-mode-theme/issues/2
+  disabled-text-color: "#555"
   text-dark-color: "#FFF"
   # Sidebar Menu
   sidebar-background-color: var(--primary-background-color)
@@ -62,14 +62,14 @@ dark-mode:
   table-row-background-color: var(--primary-background-color)
   table-row-alternative-background-color: var(--secondary-background-color)
   # Switches
-  switch-checked-color: "#30d257"  # XXX: remove when https://github.com/home-assistant/home-assistant-polymer/pull/4203 is in HA
+  switch-checked-color: "#30d257"
   switch-checked-track-color: "#30d158"  # from Apple systemGreen dark mode
   switch-checked-button-color: "#FFF"
   # Other
   paper-dialog-background-color: rgba(55, 55, 55, 0.8)  # e.g., background of more-info
   paper-item-icon-color: white  # also should mini-media-player icon white (but doesn't work by itself)
   more-info-header-background: rgba(25, 25, 25, 0.5)
-  lumo-body-text-color: var(--primary-text-color)  # see https://github.com/basnijholt/lovelace-ios-dark-mode-theme/issues/42
+  lumo-body-text-color: var(--primary-text-color)
   app-header-background-color: rgba(0, 0, 0, 0)
 
   markdown-code-background-color: "#464646"
