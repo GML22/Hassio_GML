@@ -43,7 +43,7 @@ My own configuration of Home Assistant for monitoring energy, water and gas cons
 * [Local IP Address](https://www.home-assistant.io/integrations/local_ip)
 * [Meteorologisk institutt](https://www.home-assistant.io/integrations/met)
 * [MQTT Broker](https://www.home-assistant.io/docs/mqtt/broker)
-* [MusicCast](https://www.home-assistant.io/integrations/yamaha_musiccast)
+* [Yamaha MusicCast](https://www.home-assistant.io/integrations/yamaha_musiccast)
 * [OpenWeatherMap](https://www.home-assistant.io/integrations/openweathermap)
 * [Philips Hue](https://www.home-assistant.io/integrations/hue)
 * [Plex Media Server](https://www.home-assistant.io/integrations/plex)
