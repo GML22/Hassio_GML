@@ -34,21 +34,21 @@ My own configuration of Home Assistant for monitoring energy, water and gas cons
 </p>
 
 ## Integrations
-⋅⋅* iPhone
-⋅⋅* CO2 Signal
-⋅⋅* Google Cast
-⋅⋅* HACS
-⋅⋅* Supervisor
-⋅⋅* IFTTT Webhook
-⋅⋅* Harmony Hub
-⋅⋅* local_ip
-⋅⋅* Meteorologisk institutt (Met.no)
-⋅⋅* Mosquitto broker
-⋅⋅* MusicCast
-⋅⋅* OpenWeatherMap
-⋅⋅* Philips Hue
-⋅⋅* Plex Media Server
-⋅⋅* SmartThinQ LGE Sensors
-⋅⋅* Sony PlayStation 4
-⋅⋅* Speedtest.net
-⋅⋅* Xiaomi Miio
+* iPhone
+* CO2 Signal
+* Google Cast
+* HACS
+* Supervisor
+* IFTTT Webhook
+* Harmony Hub
+* local_ip
+* Meteorologisk institutt (Met.no)
+* Mosquitto broker
+* MusicCast
+* OpenWeatherMap
+* Philips Hue
+* Plex Media Server
+* SmartThinQ LGE Sensors
+* Sony PlayStation 4
+* Speedtest.net
+* Xiaomi Miio
