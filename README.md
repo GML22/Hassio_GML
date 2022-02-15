@@ -34,6 +34,7 @@ My own configuration of Home Assistant for monitoring energy, water and gas cons
 </p>
 
 ## Integrations:
+Home Assistant:
 * [iOS](https://www.home-assistant.io/integrations/ios)
 * [CO2 Signal](https://www.home-assistant.io/integrations/co2signal)
 * [Google Cast](https://www.home-assistant.io/integrations/cast)
