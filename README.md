@@ -64,3 +64,6 @@ HACS:
 * [Tautulli](https://github.com/hassio-addons/addon-tautulli)
 * [Terminal & SSH](https://github.com/home-assistant/addons/tree/master/ssh)
 * [Wmbusmeters](https://github.com/weetmuts/wmbusmeters)
+
+## Lovelance themes and cards
+* [iOS Dark Mode Theme](https://github.com/basnijholt/lovelace-ios-dark-mode-theme)
