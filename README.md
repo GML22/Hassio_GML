@@ -63,4 +63,4 @@ HACS:
 * [Mosquitto broker](https://github.com/home-assistant/addons/tree/master/mosquitto)
 * [Tautulli](https://github.com/hassio-addons/addon-tautulli)
 * [Terminal & SSH](https://github.com/home-assistant/addons/tree/master/ssh)
-* [Wmbusmeters (W-MBus to MQTT)](https://github.com/weetmuts/wmbusmeters)
+* [Wmbusmeters](https://github.com/weetmuts/wmbusmeters)
