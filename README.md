@@ -33,7 +33,7 @@ My own configuration of Home Assistant for monitoring energy, water and gas cons
   <img width=75% height=75% src="/images/Stock_exchange_panel.gif"/>
 </p>
 
-## Integrations
+## Integrations:
 * [iOS](https://www.home-assistant.io/integrations/ios)
 * [CO2 Signal](https://www.home-assistant.io/integrations/co2signal)
 * [Google Cast](https://www.home-assistant.io/integrations/cast)
@@ -55,3 +55,12 @@ HACS:
 * [Plex Recently Added](https://github.com/custom-components/sensor.plex_recently_added)
 * [Yahoo Finance](https://github.com/iprak/yahoofinance)
 * [SmartThinQ LGE Sensors](https://github.com/ollo69/ha-smartthinq-sensors)
+
+## Add-Ons:
+* [File editor](https://github.com/home-assistant/addons/tree/master/configurator)
+* [Grafana](https://github.com/hassio-addons/addon-grafana)
+* [InfluxDB](https://github.com/hassio-addons/addon-influxdb)
+* [Mosquitto broker](https://github.com/home-assistant/addons/tree/master/mosquitto)
+* [Tautulli](https://github.com/hassio-addons/addon-tautulli)
+* [Terminal & SSH](https://github.com/home-assistant/addons/tree/master/ssh)
+* [Wmbusmeters (W-MBus to MQTT)](https://github.com/weetmuts/wmbusmeters)
