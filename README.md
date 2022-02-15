@@ -47,7 +47,11 @@ My own configuration of Home Assistant for monitoring energy, water and gas cons
 * [OpenWeatherMap](https://www.home-assistant.io/integrations/openweathermap)
 * [Philips Hue](https://www.home-assistant.io/integrations/hue)
 * [Plex Media Server](https://www.home-assistant.io/integrations/plex)
-* [SmartThinQ LGE Sensors](https://github.com/ollo69/ha-smartthinq-sensors)
 * [Sony PlayStation 4](https://www.home-assistant.io/integrations/ps4)
 * [Speedtest.net](https://www.home-assistant.io/integrations/speedtestdotnet)
 * [Xiaomi Miio](https://www.home-assistant.io/integrations/xiaomi_miio)
+
+HACS:
+* [Plex Recently Added](https://github.com/custom-components/sensor.plex_recently_added)
+* [Yahoo Finance](https://github.com/iprak/yahoofinance)
+* [SmartThinQ LGE Sensors](https://github.com/ollo69/ha-smartthinq-sensors)
