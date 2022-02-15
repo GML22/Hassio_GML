@@ -34,21 +34,20 @@ My own configuration of Home Assistant for monitoring energy, water and gas cons
 </p>
 
 ## Integrations
-* iPhone
-* CO2 Signal
-* Google Cast
-* HACS
-* Supervisor
-* IFTTT Webhook
-* Harmony Hub
-* local_ip
-* Meteorologisk institutt (Met.no)
-* Mosquitto broker
-* MusicCast
-* OpenWeatherMap
-* Philips Hue
-* Plex Media Server
-* SmartThinQ LGE Sensors
-* Sony PlayStation 4
-* Speedtest.net
-* Xiaomi Miio
+* [iOS](https://www.home-assistant.io/integrations/ios)
+* [CO2 Signal](https://www.home-assistant.io/integrations/co2signal)
+* [Google Cast](https://www.home-assistant.io/integrations/cast)
+* [HACS](https://hacs.xyz)
+* [IFTTT](https://www.home-assistant.io/integrations/ifttt)
+* [Logitech Harmony Hub](https://www.home-assistant.io/integrations/harmony)
+* [Local IP Address](https://www.home-assistant.io/integrations/local_ip)
+* [Meteorologisk institutt](https://www.home-assistant.io/integrations/met)
+* [MQTT Broker](https://www.home-assistant.io/docs/mqtt/broker)
+* [MusicCast](https://www.home-assistant.io/integrations/yamaha_musiccast)
+* [OpenWeatherMap](https://www.home-assistant.io/integrations/openweathermap)
+* [Philips Hue](https://www.home-assistant.io/integrations/hue)
+* [Plex Media Server](https://www.home-assistant.io/integrations/plex)
+* [SmartThinQ LGE Sensors](https://github.com/ollo69/ha-smartthinq-sensors)
+* [Sony PlayStation 4](https://www.home-assistant.io/integrations/ps4)
+* [Speedtest.net](https://www.home-assistant.io/integrations/speedtestdotnet)
+* [Xiaomi Miio](https://www.home-assistant.io/integrations/xiaomi_miio)
