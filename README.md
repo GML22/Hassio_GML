@@ -65,7 +65,7 @@ HACS:
 * [Terminal & SSH](https://github.com/home-assistant/addons/tree/master/ssh)
 * [Wmbusmeters](https://github.com/weetmuts/wmbusmeters)
 
-## Lovelance themes and cards
+## Lovelance themes and cards:
 * [iOS Dark Mode Theme](https://github.com/basnijholt/lovelace-ios-dark-mode-theme)
 * [Lovelace animated weather card](https://github.com/bramkragten/weather-card)
 * [Upcoming-Media-Card](https://github.com/custom-cards/upcoming-media-card)
