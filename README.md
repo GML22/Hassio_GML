@@ -5,3 +5,18 @@ My own configuration of Home Assistant for monitoring energy, water and gas cons
 <p align="center">
   <img width=75% height=75% src="/images/Main_panel.gif"/>
 </p>
+<p align="center">
+  <img width=75% height=75% src="/images/Utilities_panel.gif"/>
+</p>
+<p align="center">
+  <img width=75% height=75% src="/images/Air_quality_panel.gif"/>
+</p>
+<p align="center">
+  <img width=75% height=75% src="/images/QNAP_panel.gif"/>
+</p>
+<p align="center">
+  <img width=75% height=75% src="/images/Devices_panel.gif"/>
+</p>
+<p align="center">
+  <img width=75% height=75% src="/images/Finance_panel.gif"/>
+</p>
