@@ -67,3 +67,11 @@ HACS:
 
 ## Lovelance themes and cards
 * [iOS Dark Mode Theme](https://github.com/basnijholt/lovelace-ios-dark-mode-theme)
+* [Lovelace animated weather card](https://github.com/bramkragten/weather-card)
+* [Upcoming-Media-Card](https://github.com/custom-cards/upcoming-media-card)
+* [Button Card](https://github.com/custom-cards/button-card)
+* [card-mod 3](https://github.com/thomasloven/lovelace-card-mod)
+* [card-modder](https://github.com/thomasloven/lovelace-card-modder)
+* [card-tools](https://github.com/thomasloven/lovelace-card-tools)
+* [Vertical Stack In Card](https://github.com/ofekashery/vertical-stack-in-card)
+* [Lovelace Vacuum Map card](https://github.com/PiotrMachowski/lovelace-xiaomi-vacuum-map-card)
