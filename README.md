@@ -18,5 +18,5 @@ My own configuration of Home Assistant for monitoring energy, water and gas cons
   <img width=75% height=75% src="/images/Devices_panel.gif"/>
 </p>
 <p align="center">
-  <img width=75% height=75% src="/images/Finance_panel.gif"/>
+  <img width=75% height=75% src="/images/Stock_exchange_panel.gif"/>
 </p>
