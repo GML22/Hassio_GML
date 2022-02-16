@@ -97,7 +97,6 @@ HACS:
 * Xiaomi Mi Window and Door Sensor
 * Xiaomi Mi Smart Antibacterial Humidifier
 * LG F2DV5S8S1 Washer Dryer
-* iPhone X
 * Sony PlayStation 4 Pro
 * BMETERS RFM-TX1.1
 * Sony Bravia KDL-32W655A
