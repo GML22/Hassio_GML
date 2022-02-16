@@ -76,3 +76,34 @@ HACS:
 * [card-tools](https://github.com/thomasloven/lovelace-card-tools)
 * [Vertical Stack In Card](https://github.com/ofekashery/vertical-stack-in-card)
 * [Lovelace Vacuum Map card](https://github.com/PiotrMachowski/lovelace-xiaomi-vacuum-map-card)
+
+## Hardware:
+* QNAP TS-453Be
+* IMST iM871A-USB
+* iNode Energy Meter - magnetometer
+* iNode Energy Meter - phototransistor
+* iNode LAN - Bluetooth gateway
+* Xiaomi Roborock S6
+* ESP8266 NodeMCU v3
+* PMS7003
+* BME280
+* Philips Hue Motion Sensor
+* Philips Hue Smart Plug
+* Philips Hue White and Color Ambiance E27
+* Philips Hue White E27
+* Philips Hue Bridge
+* Amazon Echo Dot (2. Generation)
+* Logitech Harmony Hub
+* Xiaomi Mi Window and Door Sensor
+* Xiaomi Mi Smart Antibacterial Humidifier
+* LG F2DV5S8S1 Washer Dryer
+* iPhone X
+* Sony PlayStation 4 Pro
+* BMETERS RFM-TX1.1
+* Sony Bravia KDL-32W655A
+* Yamaha R-N602
+* Optoma GT1080E DLP
+* Optoma WHD200
+* Digitus Splitter DS-50304
+* Google Chromecast 4.0
+* Google Chromecast 3.0
