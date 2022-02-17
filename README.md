@@ -35,27 +35,27 @@ My own configuration of Home Assistant for monitoring energy, water and gas cons
 
 ## Integrations:
 Home Assistant:
-* [iOS](https://www.home-assistant.io/integrations/ios)
 * [CO2 Signal](https://www.home-assistant.io/integrations/co2signal)
 * [Google Cast](https://www.home-assistant.io/integrations/cast)
 * [HACS](https://hacs.xyz)
 * [IFTTT](https://www.home-assistant.io/integrations/ifttt)
-* [Logitech Harmony Hub](https://www.home-assistant.io/integrations/harmony)
+* [iOS](https://www.home-assistant.io/integrations/ios)
 * [Local IP Address](https://www.home-assistant.io/integrations/local_ip)
+* [Logitech Harmony Hub](https://www.home-assistant.io/integrations/harmony)
 * [Meteorologisk institutt](https://www.home-assistant.io/integrations/met)
 * [MQTT Broker](https://www.home-assistant.io/docs/mqtt/broker)
-* [Yamaha MusicCast](https://www.home-assistant.io/integrations/yamaha_musiccast)
 * [OpenWeatherMap](https://www.home-assistant.io/integrations/openweathermap)
 * [Philips Hue](https://www.home-assistant.io/integrations/hue)
 * [Plex Media Server](https://www.home-assistant.io/integrations/plex)
 * [Sony PlayStation 4](https://www.home-assistant.io/integrations/ps4)
 * [Speedtest.net](https://www.home-assistant.io/integrations/speedtestdotnet)
 * [Xiaomi Miio](https://www.home-assistant.io/integrations/xiaomi_miio)
+* [Yamaha MusicCast](https://www.home-assistant.io/integrations/yamaha_musiccast)
 
 HACS:
 * [Plex Recently Added](https://github.com/custom-components/sensor.plex_recently_added)
-* [Yahoo Finance](https://github.com/iprak/yahoofinance)
 * [SmartThinQ LGE Sensors](https://github.com/ollo69/ha-smartthinq-sensors)
+* [Yahoo Finance](https://github.com/iprak/yahoofinance)
 
 ## Add-Ons:
 * [File editor](https://github.com/home-assistant/addons/tree/master/configurator)
@@ -67,15 +67,15 @@ HACS:
 * [Wmbusmeters](https://github.com/weetmuts/wmbusmeters)
 
 ## Lovelance themes and cards:
-* [iOS Dark Mode Theme](https://github.com/basnijholt/lovelace-ios-dark-mode-theme)
-* [Lovelace animated weather card](https://github.com/bramkragten/weather-card)
-* [Upcoming-Media-Card](https://github.com/custom-cards/upcoming-media-card)
 * [Button Card](https://github.com/custom-cards/button-card)
 * [card-mod 3](https://github.com/thomasloven/lovelace-card-mod)
 * [card-modder](https://github.com/thomasloven/lovelace-card-modder)
 * [card-tools](https://github.com/thomasloven/lovelace-card-tools)
-* [Vertical Stack In Card](https://github.com/ofekashery/vertical-stack-in-card)
+* [iOS Dark Mode Theme](https://github.com/basnijholt/lovelace-ios-dark-mode-theme)
+* [Lovelace animated weather card](https://github.com/bramkragten/weather-card)
 * [Lovelace Vacuum Map card](https://github.com/PiotrMachowski/lovelace-xiaomi-vacuum-map-card)
+* [Upcoming-Media-Card](https://github.com/custom-cards/upcoming-media-card)
+* [Vertical Stack In Card](https://github.com/ofekashery/vertical-stack-in-card)
 
 ## Hardware:
 * Amazon Echo Dot
