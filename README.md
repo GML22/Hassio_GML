@@ -79,8 +79,8 @@ HACS:
 
 ## Hardware:
 * Amazon Echo Dot
-* BMETERS RFM-TX1.1
 * BME280
+* BMETERS RFM-TX1.1
 * Digitus Splitter DS-50304
 * ESP8266 NodeMCU v3
 * Google Chromecast 4.0
