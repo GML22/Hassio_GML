@@ -83,8 +83,8 @@ HACS:
 * BMETERS RFM-TX1.1
 * Digitus Splitter DS-50304
 * ESP8266 NodeMCU v3
-* Google Chromecast 4.0
 * Google Chromecast 3.0
+* Google Chromecast 4.0
 * IMST iM871A-USB
 * iNode Energy Meter - magnetometer
 * iNode Energy Meter - phototransistor
