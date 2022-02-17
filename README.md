@@ -93,11 +93,11 @@ HACS:
 * Logitech Harmony Hub
 * Optoma GT1080E DLP
 * Optoma WHD200
+* Philips Hue Bridge
 * Philips Hue Motion Sensor
 * Philips Hue Smart Plug
 * Philips Hue White and Color Ambiance E27
 * Philips Hue White E27
-* Philips Hue Bridge
 * PMS7003
 * QNAP TS-453Be
 * Sony Bravia KDL-32W655A
