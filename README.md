@@ -78,31 +78,32 @@ HACS:
 * [Lovelace Vacuum Map card](https://github.com/PiotrMachowski/lovelace-xiaomi-vacuum-map-card)
 
 ## Hardware:
-* QNAP TS-453Be
+* Amazon Echo Dot
+* BMETERS RFM-TX1.1
+* BME280
+* Digitus Splitter DS-50304
+* ESP8266 NodeMCU v3
+* Google Chromecast 4.0
+* Google Chromecast 3.0
 * IMST iM871A-USB
 * iNode Energy Meter - magnetometer
 * iNode Energy Meter - phototransistor
 * iNode LAN - Bluetooth gateway
-* Xiaomi Roborock S6
-* ESP8266 NodeMCU v3
-* PMS7003
-* BME280
+* LG F2DV5S8S1 Washer Dryer
+* Logitech Harmony Hub
+* Optoma GT1080E DLP
+* Optoma WHD200
 * Philips Hue Motion Sensor
 * Philips Hue Smart Plug
 * Philips Hue White and Color Ambiance E27
 * Philips Hue White E27
 * Philips Hue Bridge
-* Amazon Echo Dot (2. Generation)
-* Logitech Harmony Hub
-* Xiaomi Mi Window and Door Sensor
-* Xiaomi Mi Smart Antibacterial Humidifier
-* LG F2DV5S8S1 Washer Dryer
-* Sony PlayStation 4 Pro
-* BMETERS RFM-TX1.1
+* PMS7003
+* QNAP TS-453Be
 * Sony Bravia KDL-32W655A
+* Sony PlayStation 4 Pro
+* Xiaomi Mi Smart Antibacterial Humidifier
+* Xiaomi Mi Smart Home Hub
+* Xiaomi Mi Window and Door Sensor
+* Xiaomi Roborock S6
 * Yamaha R-N602
-* Optoma GT1080E DLP
-* Optoma WHD200
-* Digitus Splitter DS-50304
-* Google Chromecast 4.0
-* Google Chromecast 3.0
