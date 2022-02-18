@@ -5,32 +5,32 @@ My own configuration of Home Assistant for monitoring energy, water and gas cons
 ## Lovelace UI:
 ### Main panel
 <p align="center">
-  <img width=75% height=75% src="/images/Main_panel.gif"/>
+  <img width=100% height=100% src="/images/Main_panel.gif"/>
 </p>
 
 ### Utilities panel
 <p align="center">
-  <img width=75% height=75% src="/images/Utilities_panel.gif"/>
+  <img width=100% height=100% src="/images/Utilities_panel.gif"/>
 </p>
 
 ### Air quality panel
 <p align="center">
-  <img width=75% height=75% src="/images/Air_quality_panel.gif"/>
+  <img width=100% height=100% src="/images/Air_quality_panel.gif"/>
 </p>
 
 ### NAS server panel
 <p align="center">
-  <img width=75% height=75% src="/images/QNAP_panel.gif"/>
+  <img width=100% height=100% src="/images/QNAP_panel.gif"/>
 </p>
 
 ### Devices panel
 <p align="center">
-  <img width=75% height=75% src="/images/Devices_panel.gif"/>
+  <img width=100% height=100% src="/images/Devices_panel.gif"/>
 </p>
 
 ### Finance panel
 <p align="center">
-  <img width=75% height=75% src="/images/Stock_exchange_panel.gif"/>
+  <img width=100% height=100% src="/images/Stock_exchange_panel.gif"/>
 </p>
 
 ## Integrations:
