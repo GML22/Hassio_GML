@@ -1,6 +1,6 @@
 # Hassio_GML
 
-*[This project was implemented in January 2022]*
+*[This project was completed in January 2022]*
 
 <p align="justify">
 My own configuration of Home Assistant for monitoring energy, water and gas consumption, controlling smart devices and tracking all kinds of statistics. Home Assistant OS 7.2 is installed through QNAP Virtualization Station 3 on a QNAP TS-453Be NAS server.</p>
