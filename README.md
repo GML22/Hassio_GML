@@ -48,9 +48,13 @@ My own configuration of Home Assistant for monitoring energy, water and gas cons
 
 ## Integrations:
 Home Assistant:
+* [Airly](https://www.home-assistant.io/integrations/airly)
 * [CO2 Signal](https://www.home-assistant.io/integrations/co2signal)
+* [DLNA Digital Media Renderer](https://www.home-assistant.io/integrations/dlna_dmr)
 * [Google Cast](https://www.home-assistant.io/integrations/cast)
 * [HACS](https://hacs.xyz)
+* [Home Assistant Supervisor](https://www.home-assistant.io/integrations/hassio)
+* [HomeKit Controller](https://www.home-assistant.io/integrations/homekit_controller)
 * [IFTTT](https://www.home-assistant.io/integrations/ifttt)
 * [iOS](https://www.home-assistant.io/integrations/ios)
 * [Local IP Address](https://www.home-assistant.io/integrations/local_ip)
@@ -60,8 +64,13 @@ Home Assistant:
 * [OpenWeatherMap](https://www.home-assistant.io/integrations/openweathermap)
 * [Philips Hue](https://www.home-assistant.io/integrations/hue)
 * [Plex Media Server](https://www.home-assistant.io/integrations/plex)
-* [Sony PlayStation 4](https://www.home-assistant.io/integrations/ps4)
+* [SmartThinQ LGE Sensors](https://github.com/ollo69/ha-smartthinq-sensors)
+* [Sony Bravia TV](https://www.home-assistant.io/integrations/braviatv/)
 * [Speedtest.net](https://www.home-assistant.io/integrations/speedtestdotnet)
+* [Tautulli](https://www.home-assistant.io/integrations/tautulli)
+* [Thermal Comfort](https://github.com/dolezsa/thermal_comfort)
+* [Waze Travel Time](https://www.home-assistant.io/integrations/waze_travel_time)
+* [WiZ](https://www.home-assistant.io/integrations/wiz/)
 * [Xiaomi Miio](https://www.home-assistant.io/integrations/xiaomi_miio)
 * [Yamaha MusicCast](https://www.home-assistant.io/integrations/yamaha_musiccast)
 
