@@ -73,16 +73,9 @@ Home Assistant:
 * [Yamaha MusicCast](https://www.home-assistant.io/integrations/yamaha_musiccast)
 
 HACS:
-* [Button Card](https://github.com/custom-cards/button-card)
-* [card-mod 3](https://github.com/thomasloven/lovelace-card-mod)
-* [iOS Dark Mode Theme](https://github.com/basnijholt/lovelace-ios-dark-mode-theme)
-* [layout-card](https://github.com/thomasloven/lovelace-layout-card)
-* [Lovelace RPi Monitor Card](https://github.com/ironsheep/lovelace-rpi-monitor-card)
 * [Plex Recently Added](https://github.com/custom-components/sensor.plex_recently_added)
 * [SmartThinQ LGE Sensors](https://github.com/ollo69/ha-smartthinq-sensors)
 * [Thermal Comfort](https://github.com/dolezsa/thermal_comfort)
-* [Vacuum Card](https://github.com/denysdovhan/vacuum-card)
-* [Weather Radar Card](https://github.com/Makin-Things/weather-radar-card)
 * [Yahoo Finance](https://github.com/iprak/yahoofinance)
 
 ## Add-Ons:
@@ -100,10 +93,14 @@ HACS:
 * [card-modder](https://github.com/thomasloven/lovelace-card-modder)
 * [card-tools](https://github.com/thomasloven/lovelace-card-tools)
 * [iOS Dark Mode Theme](https://github.com/basnijholt/lovelace-ios-dark-mode-theme)
+* [layout-card](https://github.com/thomasloven/lovelace-layout-card)
 * [Lovelace animated weather card](https://github.com/bramkragten/weather-card)
+* [Lovelace RPi Monitor Card](https://github.com/ironsheep/lovelace-rpi-monitor-card)
 * [Lovelace Vacuum Map card](https://github.com/PiotrMachowski/lovelace-xiaomi-vacuum-map-card)
 * [Upcoming-Media-Card](https://github.com/custom-cards/upcoming-media-card)
 * [Vertical Stack In Card](https://github.com/ofekashery/vertical-stack-in-card)
+* [Vacuum Card](https://github.com/denysdovhan/vacuum-card)
+* [Weather Radar Card](https://github.com/Makin-Things/weather-radar-card)
 
 ## Hardware:
 * Amazon Echo Dot
