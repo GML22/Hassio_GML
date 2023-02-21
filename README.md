@@ -3,7 +3,7 @@
 *[This project was completed in February 2022 (Updates: February 2023)]*
 
 <p align="justify">
-My own configuration of Home Assistant for monitoring energy, water and gas consumption, controlling smart devices and tracking all kinds of statistics. Home Assistant OS 9.5 (2023.2.5) is installed through QNAP Virtualization Station 3 on a QNAP TS-453Be NAS server.</p>
+My own configuration of [Home Assistant](https://www.home-assistant.io) for monitoring energy, water and gas consumption, controlling smart devices and tracking all kinds of statistics. Home Assistant OS 9.5 (2023.2.5) is installed through QNAP Virtualization Station 3 on a QNAP TS-453Be NAS server.</p>
 
 ## Lovelace UI:
 ### Main panel
