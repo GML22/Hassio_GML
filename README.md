@@ -1,6 +1,6 @@
 # Hassio_GML
 
-*[This project was completed in February 2022]*
+*[This project was completed in February 2022 (Updates: February 2023)]*
 
 <p align="justify">
 My own configuration of Home Assistant for monitoring energy, water and gas consumption, controlling smart devices and tracking all kinds of statistics. Home Assistant OS 7.2 is installed through QNAP Virtualization Station 3 on a QNAP TS-453Be NAS server.</p>
@@ -8,32 +8,42 @@ My own configuration of Home Assistant for monitoring energy, water and gas cons
 ## Lovelace UI:
 ### Main panel
 <p align="center">
-  <img width=100% height=100% src="/images/Main_panel.gif"/>
+  <img width=100% height=100% src="/images/main_panel_2022_02_21.gif"/>
 </p>
 
 ### Utilities panel
 <p align="center">
-  <img width=100% height=100% src="/images/Utilities_panel.gif"/>
+  <img width=100% height=100% src="/images/utilities_panel_2022_02_21.gif"/>
 </p>
 
-### Air quality panel
+### Indoor air quality panel
 <p align="center">
-  <img width=100% height=100% src="/images/Air_quality_panel.gif"/>
+  <img width=100% height=100% src="/images/int_air_quality_panel_2022_02_21.gif"/>
 </p>
 
-### NAS server panel
+### Outdoor air quality panel
 <p align="center">
-  <img width=100% height=100% src="/images/QNAP_panel.gif"/>
+  <img width=100% height=100% src="/images/ext_air_quality_panel_2022_02_21.gif"/>
 </p>
 
-### Devices panel
+### Main devices panel
 <p align="center">
-  <img width=100% height=100% src="/images/Devices_panel.gif"/>
+  <img width=100% height=100% src="/images/rtv_devices_panel_2022_02_21.gif"/>
+</p>
+
+### Other devices panel
+<p align="center">
+  <img width=100% height=100% src="/images/other_devices_panel_2022_02_21.gif"/>
+</p>
+
+### NAS and Raspberry Pi panel
+<p align="center">
+  <img width=100% height=100% src="/images/nas_panel_2022_02_21.gif"/>
 </p>
 
 ### Finance panel
 <p align="center">
-  <img width=100% height=100% src="/images/Stock_exchange_panel.gif"/>
+  <img width=100% height=100% src="/images/stock_exchange_panel_2022_02_21.gif"/>
 </p>
 
 ## Integrations:
