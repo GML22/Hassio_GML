@@ -1,0 +1,255 @@
+# SMOGLY SENSORS
+sensor:
+    - state_topic: "Smogly-xxxxx/sensor/temperature"
+      name: "Smogly temperatura"
+      unit_of_measurement: "ºC"
+
+    - state_topic: "Smogly-xxxxx/sensor/humidity"
+      name: "Smogly wilgotnosc"
+      unit_of_measurement: "%"
+
+    - state_topic: "Smogly-xxxxx/sensor/pressure"
+      name: "Smogly cisnienie"
+      unit_of_measurement: "hPa"
+
+    - state_topic: "Smogly-xxxxx/sensor/PM1"
+      name: "Smogly PM1"
+      unit_of_measurement: "µg/m³"
+
+    - state_topic: "Smogly-xxxxx/sensor/PM2.5"
+      name: "Smogly PM2.5"
+      unit_of_measurement: "µg/m³"
+
+    - state_topic: "Smogly-xxxxx/sensor/PM10"
+      name: "Smogly PM10"
+      unit_of_measurement: "µg/m³"
+  
+    - state_topic: "Smogly-xxxxx/sensor/air_quality"
+      name: "Smogly Air Quality"
+      
+# BMETERS WATER METERS
+    - state_topic: "wmbusmeters/bmeters_xxxxx"
+      json_attributes_topic: "wmbusmeters/bmeters_xxxxx"
+      name: bmeters_xxxxx
+      unit_of_measurement: 'm³'
+      value_template: "{{ value_json.total_m3 }}"
+      device_class: "water"
+      state_class: "total_increasing"
+
+    - state_topic: "wmbusmeters/bmeters_xxxxx"
+      json_attributes_topic: "wmbusmeters/bmeters_xxxxx"
+      name: bmeters_xxxxx
+      unit_of_measurement: 'm³'
+      value_template: "{{ value_json.total_m3 }}"
+      device_class: "water"
+      state_class: "total_increasing"
+
+    - state_topic: "wmbusmeters/bmeters_xxxxx"
+      json_attributes_topic: "wmbusmeters/bmeters_xxxxx"
+      name: bmeters_xxxxx
+      unit_of_measurement: 'm³'
+      value_template: "{{ value_json.total_m3 }}"
+      device_class: "water"
+      state_class: "total_increasing"
+ 
+    - state_topic: "wmbusmeters/bmeters_xxxxx"
+      json_attributes_topic: "wmbusmeters/bmeters_xxxxx"
+      name: bmeters_xxxxx
+      unit_of_measurement: 'm³'
+      value_template: "{{ value_json.total_m3 }}"
+      device_class: "water"
+      state_class: "total_increasing"
+
+# INODE SENSORS ENERGY
+    - state_topic: "iNodeLAN/xxxxx"
+      name: "Zuzycie chwilowe pradu"
+      unit_of_measurement: 'W'
+      value_template: >
+        {% set ns = namespace(found=false) %}
+        {% for dev in value_json.data %}
+         {% if dev.mac == 'xxxxx' %}
+          {% set val = dev.rawData %}
+          {% if (val[12:14] == "82") %}
+           {# set new value found true #}
+           {% set ns.found = true %}
+           {% set p = 12 %}
+           {{ ((((((val[p+4]~val[p+5]~val[p+2]~val[p+3])| int(base=16)))/5000)*60)*1000) | round(0) }}
+          {% endif %}
+         {% endif %}
+        {% endfor %} 
+        {% if not(ns.found) %}
+         {{ states('sensor.zuzycie_chwilowe_pradu') }}
+        {% endif %}
+
+    - state_topic: "iNodeLAN/xxxxx"
+      name: "Licznik pradu"
+      unit_of_measurement: 'kWh'
+      value_template: >
+        {% set ns = namespace(found=false) %}
+        {% for dev in value_json.data %}
+         {% if dev.mac == 'xxxxx' %}
+          {% set val = dev.rawData %}
+          {% if (val[12:14] == "82") %}
+           {% set ns.found = true %}
+           {% set p = 18 %}
+           {{ ((((val[p+6]~val[p+7]~val[p+4]~val[p+5]~val[p+2]~val[p+3]~val[p]~val[p+1])| int(base=16)))/5000) | round(2) }}
+          {% endif %}
+         {% endif %}
+        {% endfor %} 
+        {% if not(ns.found) %}
+         {{ states('sensor.licznik_pradu') }}
+        {% endif %}
+    
+    - state_topic: "iNodeLAN/xxxxx"
+      name: "Pomiar energii dzisiaj"
+      unit_of_measurement: 'kWh'
+      value_template: >
+        {% set ns = namespace(found=false) %}
+        {% for dev in value_json.data %}
+         {% if dev.mac == 'xxxxx' %}
+          {% set val = dev.rawData %}
+          {% if (val[12:14] == "82") %}
+           {% set ns.found = true %}
+           {% set p = 32 %}
+           {{ ((val[p]~val[p+1])| int(base=16)) }}
+          {% endif %}
+         {% endif %}
+        {% endfor %} 
+        {% if not(ns.found) %}
+         {{ states('sensor.pomiar_energii_dzisiaj') }}
+        {% endif %} 
+
+    - state_topic: "iNodeLAN/xxxxx"
+      name: "Bateria prad perc"
+      unit_of_measurement: '%'
+      value_template: >
+        {% set ns = namespace(found=false) %}
+        {% for dev in value_json.data %}
+         {% if dev.mac == 'xxxxx' %}
+          {% set val = dev.rawData %}
+          {% if (val[12:14] == "82") %}
+           {% set ns.found = true %}
+           {% set p = 30 %}
+           {{ (((val[p]) | int(base=16)-2)*10) }}
+          {% endif %}
+         {% endif %}
+        {% endfor %} 
+        {% if not(ns.found) %}
+         {{ states('sensor.bateria_prad_perc') }}
+        {% endif %} 
+
+    - state_topic: "iNodeLAN/xxxxx"
+      name: "Bateria prad napiecie"
+      unit_of_measurement: 'V'
+      value_template: >
+        {% set ns = namespace(found=false) %}
+        {% for dev in value_json.data %}
+         {% if dev.mac == 'xxxxx' %}
+          {% set val = dev.rawData %}
+          {% if (val[12:14] == "82") %}
+           {% set ns.found = true %}
+           {% set p = 30 %}
+           {{ (((((val[p]) | int(base=16)-2)*10)*1.2)/100)+1.8 }}
+          {% endif %}
+         {% endif %}
+        {% endfor %} 
+        {% if not(ns.found) %}
+         {{ states('sensor.bateria_prad_napiecie') }}
+        {% endif %} 
+
+# INODE SENSORS GAS
+    - state_topic: "iNodeLAN/xxxxx"
+      name: "Zuzycie chwilowe gazu"
+      unit_of_measurement: 'cm³'
+      value_template: >
+        {% set ns = namespace(found=false) %}
+        {% for dev in value_json.data %}
+         {% if dev.mac == 'xxxxx' %}
+          {% set val = dev.rawData %}
+          {% if (val[12:14] == "82") %}
+           {# set new value found true #}
+           {% set ns.found = true %}
+           {% set p = 12 %}
+           {{ ((((((val[p+4]~val[p+5]~val[p+2]~val[p+3])| int(base=16)))/100)*60)*10000) | round(0) }}
+          {% endif %}
+         {% endif %}
+        {% endfor %} 
+        {% if not(ns.found) %}
+         {{ states('sensor.zuzycie_chwilowe_gazu') }}
+        {% endif %}
+
+    - state_topic: "iNodeLAN/xxxxx"
+      name: "Licznik gazu"
+      unit_of_measurement: 'm³'
+      value_template: >
+        {% set ns = namespace(found=false) %}
+        {% for dev in value_json.data %}
+         {% if dev.mac == 'xxxxx' %}
+          {% set val = dev.rawData %}
+          {% if (val[12:14] == "82") %}
+           {% set ns.found = true %}
+           {% set p = 18 %}
+           {{ ((((val[p+6]~val[p+7]~val[p+4]~val[p+5]~val[p+2]~val[p+3]~val[p]~val[p+1])| int(base=16)))/100) | round(2) }}
+          {% endif %}
+         {% endif %}
+        {% endfor %} 
+        {% if not(ns.found) %}
+         {{ states('sensor.licznik_gazu') }}
+        {% endif %}
+    
+    - state_topic: "iNodeLAN/xxxxx"
+      name: "Pomiar gazu dzisiaj"
+      unit_of_measurement: 'm³'
+      value_template: >
+        {% set ns = namespace(found=false) %}
+        {% for dev in value_json.data %}
+         {% if dev.mac == 'xxxxx' %}
+          {% set val = dev.rawData %}
+          {% if (val[12:14] == "82") %}
+           {% set ns.found = true %}
+           {% set p = 32 %}
+           {{ ((val[p]~val[p+1])| int(base=16)) }}
+          {% endif %}
+         {% endif %}
+        {% endfor %} 
+        {% if not(ns.found) %}
+         {{ states('sensor.pomiar_gazu_dzisiaj') }}
+        {% endif %} 
+
+    - state_topic: "iNodeLAN/xxxxx"
+      name: "Bateria gaz perc"
+      unit_of_measurement: '%'
+      value_template: >
+        {% set ns = namespace(found=false) %}
+        {% for dev in value_json.data %}
+         {% if dev.mac == 'xxxxx' %}
+          {% set val = dev.rawData %}
+          {% if (val[12:14] == "82") %}
+           {% set ns.found = true %}
+           {% set p = 30 %}
+           {{ (((val[p]) | int(base=16)-2)*10) }}
+          {% endif %}
+         {% endif %}
+        {% endfor %} 
+        {% if not(ns.found) %}
+         {{ states('sensor.bateria_gaz_perc') }}
+        {% endif %} 
+
+    - state_topic: "iNodeLAN/xxxxx"
+      name: "Bateria gaz napiecie"
+      unit_of_measurement: 'V'
+      value_template: >
+        {% set ns = namespace(found=false) %}
+        {% for dev in value_json.data %}
+         {% if dev.mac == 'xxxxx' %}
+          {% set val = dev.rawData %}
+          {% if (val[12:14] == "82") %}
+           {% set ns.found = true %}
+           {% set p = 30 %}
+           {{ (((((val[p]) | int(base=16)-2)*10)*1.2)/100)+1.8 }}
+          {% endif %}
+         {% endif %}
+        {% endfor %} 
+        {% if not(ns.found) %}
+         {{ states('sensor.bateria_gaz_napiecie') }}
+        {% endif %}

@@ -1,301 +1,10 @@
-# BMETERS WATER METERS
-- platform: mqtt
-  state_topic: "wmbusmeters/xxx"
-  name: bmeters_xxx
-  value_template: >
-    {% set current = states('sensor.bmeters_xxx') | float | round(3) %}
-    {% set new = value_json["total_m3"] | float | round(3)  %}
-    {% macro max(X, Y) -%} {{X|float if X|float > Y|float else Y|float }} {%- endmacro %}
-    {{ max(current, new) }}
-  unit_of_measurement: 'm³'
-  force_update: true
-  expire_after: 604800
-
-- platform: mqtt
-  state_topic: "wmbusmeters/xxx"
-  name: bmeters_xxx
-  value_template: >
-    {% set current = states('sensor.bmeters_xxx') | float | round(3) %}
-    {% set new = value_json["total_m3"] | float | round(3) %}
-    {% macro max(X, Y) -%} {{X|float if X|float > Y|float else Y|float }} {%- endmacro %}
-    {{ max(current, new) }}
-  unit_of_measurement: 'm³'
-  force_update: true   
-  expire_after: 604800
-
-- platform: mqtt
-  state_topic: "wmbusmeters/xxx"
-  name: bmeters_xxx
-  value_template: >
-    {% set current = states('sensor.bmeters_xxx') | float | round(3) %}
-    {% set new = value_json["total_m3"] | float | round(3)  %}
-    {% macro max(X, Y) -%} {{X|float if X|float > Y|float else Y|float }} {%- endmacro %}
-    {{ max(current, new) }}
-  unit_of_measurement: 'm³'
-  force_update: true
-  expire_after: 604800
- 
-- platform: mqtt
-  state_topic: "wmbusmeters/xxx"
-  name: bmeters_xxx
-  value_template: >
-    {% set current = states('sensor.bmeters_xxx') | float | round(3) %}
-    {% set new = value_json["total_m3"] | float | round(3) %}
-    {% macro max(X, Y) -%} {{X|float if X|float > Y|float else Y|float }} {%- endmacro %}
-    {{ max(current, new) }}
-  unit_of_measurement: 'm³'
-  force_update: true
-  expire_after: 604800
-  
+# B-METERS
 - platform: template
   sensors:
     total_water:
       friendly_name: Total water
       unit_of_measurement: 'm³'
-      value_template: >
-        {% set current = states('sensor.total_water') | float | round(3) %}
-        {% set new = (states('sensor.bmeters_xxx')|float + states('sensor.bmeters_xxx')|float + states('sensor.bmeters_xxx')|float + states('sensor.bmeters_xxx')|float)|round(3) %}
-        {% macro max(X, Y) -%} {{X|float if X|float > Y|float else Y|float }} {%- endmacro %}
-        {% if states('sensor.bmeters_xxx') | float > 0 and states('sensor.bmeters_xxx') | float > 0 and states('sensor.bmeters_xxx') | float > 0 and states('sensor.bmeters_xxx') | float | round(3) > 0 %}
-          {{ max(current, new) }}
-        {% else %}
-          {{ states('sensor.total_water') }}
-        {% endif %}
-  
-  # SMOGLY SENSORS
-- platform: mqtt
-  state_topic: "Smogly-2ED0EA/sensor/temperature"
-  name: "Smogly temperatura"
-  unit_of_measurement: "ºC"
-
-- platform: mqtt
-  state_topic: "Smogly-2ED0EA/sensor/humidity"
-  name: "Smogly wilgotnosc"
-  unit_of_measurement: "%"
-
-- platform: mqtt
-  state_topic: "Smogly-2ED0EA/sensor/pressure"
-  name: "Smogly cisnienie"
-  unit_of_measurement: "hPa"
-
-- platform: mqtt
-  state_topic: "Smogly-2ED0EA/sensor/PM1"
-  name: "Smogly PM1"
-  unit_of_measurement: "µg/m³"
-
-- platform: mqtt
-  state_topic: "Smogly-2ED0EA/sensor/PM2.5"
-  name: "Smogly PM2.5"
-  unit_of_measurement: "µg/m³"
-
-- platform: mqtt
-  state_topic: "Smogly-2ED0EA/sensor/PM10"
-  name: "Smogly PM10"
-  unit_of_measurement: "µg/m³"
-
-  # INODE SENSORS ENERGY
-- platform: mqtt
-  name: "Zuzycie chwilowe pradu"
-  unit_of_measurement: 'W'
-  state_topic: "iNodeLAN/xxx"
-  value_template: >
-    {% set ns = namespace(found=false) %}
-    {% for dev in value_json.data %}
-     {% if dev.mac == 'xxx' %}
-      {% set val = dev.rawData %}
-      {% if (val[12:14] == "82") %}
-       {# set new value found true #}
-       {% set ns.found = true %}
-       {% set p = 12 %}
-       {{ ((((((val[p+4]~val[p+5]~val[p+2]~val[p+3])| int(base=16)))/5000)*60)*1000) | round(0) }}
-      {% endif %}
-     {% endif %}
-    {% endfor %} 
-    {% if not(ns.found) %}
-     {{ states('sensor.zuzycie_chwilowe_pradu') }}
-    {% endif %}
-
-- platform: mqtt
-  name: "Licznik pradu"
-  unit_of_measurement: 'kWh'
-  state_topic: "iNodeLAN/xxx"
-  value_template: >
-    {% set ns = namespace(found=false) %}
-    {% for dev in value_json.data %}
-     {% if dev.mac == 'xxx' %}
-      {% set val = dev.rawData %}
-      {% if (val[12:14] == "82") %}
-       {% set ns.found = true %}
-       {% set p = 18 %}
-       {{ ((((val[p+6]~val[p+7]~val[p+4]~val[p+5]~val[p+2]~val[p+3]~val[p]~val[p+1])| int(base=16)))/5000) | round(2) }}
-      {% endif %}
-     {% endif %}
-    {% endfor %} 
-    {% if not(ns.found) %}
-     {{ states('sensor.licznik_pradu') }}
-    {% endif %}
-    
-- platform: mqtt
-  name: "Pomiar energii dzisiaj"
-  unit_of_measurement: 'kWh'
-  state_topic: "iNodeLAN/xxx"
-  value_template: >
-    {% set ns = namespace(found=false) %}
-    {% for dev in value_json.data %}
-     {% if dev.mac == 'xxx' %}
-      {% set val = dev.rawData %}
-      {% if (val[12:14] == "82") %}
-       {% set ns.found = true %}
-       {% set p = 32 %}
-       {{ ((val[p]~val[p+1])| int(base=16)) }}
-      {% endif %}
-     {% endif %}
-    {% endfor %} 
-    {% if not(ns.found) %}
-     {{ states('sensor.pomiar_energii_dzisiaj') }}
-    {% endif %} 
-
-- platform: mqtt
-  name: "Bateria prad perc"
-  unit_of_measurement: '%'
-  state_topic: "iNodeLAN/xxx"
-  value_template: >
-    {% set ns = namespace(found=false) %}
-    {% for dev in value_json.data %}
-     {% if dev.mac == 'xxx' %}
-      {% set val = dev.rawData %}
-      {% if (val[12:14] == "82") %}
-       {% set ns.found = true %}
-       {% set p = 30 %}
-       {{ (((val[p]) | int(base=16)-2)*10) }}
-      {% endif %}
-     {% endif %}
-    {% endfor %} 
-    {% if not(ns.found) %}
-     {{ states('sensor.bateria_prad_perc') }}
-    {% endif %} 
-
-- platform: mqtt
-  name: "Bateria prad napiecie"
-  unit_of_measurement: 'V'
-  state_topic: "iNodeLAN/xxx"
-  value_template: >
-    {% set ns = namespace(found=false) %}
-    {% for dev in value_json.data %}
-     {% if dev.mac == 'xxx' %}
-      {% set val = dev.rawData %}
-      {% if (val[12:14] == "82") %}
-       {% set ns.found = true %}
-       {% set p = 30 %}
-       {{ (((((val[p]) | int(base=16)-2)*10)*1.2)/100)+1.8 }}
-      {% endif %}
-     {% endif %}
-    {% endfor %} 
-    {% if not(ns.found) %}
-     {{ states('sensor.bateria_prad_napiecie') }}
-    {% endif %} 
-
-  # INODE SENSORS GAS
-- platform: mqtt
-  name: "Zuzycie chwilowe gazu"
-  unit_of_measurement: 'cm³'
-  state_topic: "iNodeLAN/xxx"
-  value_template: >
-    {% set ns = namespace(found=false) %}
-    {% for dev in value_json.data %}
-     {% if dev.mac == 'xxx' %}
-      {% set val = dev.rawData %}
-      {% if (val[12:14] == "82") %}
-       {# set new value found true #}
-       {% set ns.found = true %}
-       {% set p = 12 %}
-       {{ ((((((val[p+4]~val[p+5]~val[p+2]~val[p+3])| int(base=16)))/100)*60)*10000) | round(0) }}
-      {% endif %}
-     {% endif %}
-    {% endfor %} 
-    {% if not(ns.found) %}
-     {{ states('sensor.zuzycie_chwilowe_gazu') }}
-    {% endif %}
-
-- platform: mqtt
-  name: "Licznik gazu"
-  unit_of_measurement: 'm³'
-  state_topic: "iNodeLAN/xxx"
-  value_template: >
-    {% set ns = namespace(found=false) %}
-    {% for dev in value_json.data %}
-     {% if dev.mac == 'xxx' %}
-      {% set val = dev.rawData %}
-      {% if (val[12:14] == "82") %}
-       {% set ns.found = true %}
-       {% set p = 18 %}
-       {{ ((((val[p+6]~val[p+7]~val[p+4]~val[p+5]~val[p+2]~val[p+3]~val[p]~val[p+1])| int(base=16)))/100) | round(2) }}
-      {% endif %}
-     {% endif %}
-    {% endfor %} 
-    {% if not(ns.found) %}
-     {{ states('sensor.licznik_gazu') }}
-    {% endif %}
-    
-- platform: mqtt
-  name: "Pomiar gazu dzisiaj"
-  unit_of_measurement: 'm³'
-  state_topic: "iNodeLAN/xxx"
-  value_template: >
-    {% set ns = namespace(found=false) %}
-    {% for dev in value_json.data %}
-     {% if dev.mac == 'xxx' %}
-      {% set val = dev.rawData %}
-      {% if (val[12:14] == "82") %}
-       {% set ns.found = true %}
-       {% set p = 32 %}
-       {{ ((val[p]~val[p+1])| int(base=16)) }}
-      {% endif %}
-     {% endif %}
-    {% endfor %} 
-    {% if not(ns.found) %}
-     {{ states('sensor.pomiar_gazu_dzisiaj') }}
-    {% endif %} 
-
-- platform: mqtt
-  name: "Bateria gaz perc"
-  unit_of_measurement: '%'
-  state_topic: "iNodeLAN/xxx"
-  value_template: >
-    {% set ns = namespace(found=false) %}
-    {% for dev in value_json.data %}
-     {% if dev.mac == 'xxx' %}
-      {% set val = dev.rawData %}
-      {% if (val[12:14] == "82") %}
-       {% set ns.found = true %}
-       {% set p = 30 %}
-       {{ (((val[p]) | int(base=16)-2)*10) }}
-      {% endif %}
-     {% endif %}
-    {% endfor %} 
-    {% if not(ns.found) %}
-     {{ states('sensor.bateria_gaz_perc') }}
-    {% endif %} 
-
-- platform: mqtt
-  name: "Bateria gaz napiecie"
-  unit_of_measurement: 'V'
-  state_topic: "iNodeLAN/xxx"
-  value_template: >
-    {% set ns = namespace(found=false) %}
-    {% for dev in value_json.data %}
-     {% if dev.mac == 'xxx' %}
-      {% set val = dev.rawData %}
-      {% if (val[12:14] == "82") %}
-       {% set ns.found = true %}
-       {% set p = 30 %}
-       {{ (((((val[p]) | int(base=16)-2)*10)*1.2)/100)+1.8 }}
-      {% endif %}
-     {% endif %}
-    {% endfor %} 
-    {% if not(ns.found) %}
-     {{ states('sensor.bateria_gaz_napiecie') }}
-    {% endif %} 
+      value_template: "{{ states('sensor.bmeters_xxxxx') | float + states('sensor.bmeters_xxxxx') | float + states('sensor.bmeters_xxxxx') | float + states('sensor.bmeters_xxxxx') | float }}"
 
 # QNAP SENSORS
 - platform: qnap
@@ -320,6 +29,7 @@
     - volume_size_used
     - volume_percentage_used
 
+
 # Philips led sensor
 - platform: template
   sensors:
@@ -334,10 +44,10 @@
     vacuum_status:
       friendly_name: Status
       entity_id:
-        - vacuum.vacuum
-      value_template: 'Status: {{ states.vacuum.vacuum.attributes.status }}'
+        - vacuum.roborock_s6
+      value_template: 'Status: {{ states.vacuum.roborock_s6.attributes.status }}'
       icon_template: >
-        {% set val =  states.vacuum.vacuum.attributes.status  %}
+        {% set val =  states.vacuum.roborock_s6.attributes.status  %}
         {% if val == 'Charging' %}
           mdi:battery-charging
         {% elif val == 'Cleaning' %}
@@ -354,82 +64,30 @@
     vacuum_fan_speed:
       friendly_name: Fan Speed
       entity_id:
-        - vacuum.vacuum
-      value_template: 'Mode: {{ states.vacuum.vacuum.attributes.fan_speed }}'
+        - vacuum.roborock_s6
+      value_template: 'Mode: {{ states.vacuum.roborock_s6.attributes.fan_speed }}'
       icon_template: 'mdi:speedometer'
     vacuum_battery:
       friendly_name: Vacuum Battery
       entity_id:
-        - vacuum.vacuum
-      value_template: 'Battery: {{ states.vacuum.vacuum.attributes.battery_level }}'
+        - vacuum.roborock_s6
+      value_template: 'Battery: {{ states.vacuum.roborock_s6.attributes.battery_level }}'
       unit_of_measurement: '%'
-      icon_template: '{{ states.vacuum.vacuum.attributes.battery_icon }}'
-    vacuum_cleaning_time:
-      friendly_name: Time of Last Cycle
-      entity_id:
-        - vacuum.vacuum
-      value_template: '{{ states.vacuum.vacuum.attributes.cleaning_time }}'
-      icon_template: 'mdi:timer'
-    vacuum_total_cleaning_time:
-      friendly_name: Total time of cleaning
-      entity_id:
-        - vacuum.vacuum
-      value_template: '{{ states.vacuum.vacuum.attributes.total_cleaning_time }}'
-      icon_template: 'mdi:timer'
+      icon_template: '{{ states.vacuum.roborock_s6.attributes.battery_icon }}'
     vacuum_cleaned_area:
       friendly_name: Area of Last Cycle
-      unit_of_measurement: 'm ²'
+      unit_of_measurement: 'm²'
       entity_id:
-        - vacuum.vacuum
-      value_template: '{{ states.vacuum.vacuum.attributes.cleaned_area }}'
+        - vacuum.roborock_s6
+      value_template: "{{ states('sensor.roborock_s6_last_clean_area') | float | round(2) }}"
       icon_template: 'mdi:ruler'
     vacuum_total_cleaned_area:
       friendly_name: Total area of cleaning
-      unit_of_measurement: 'm ²'
+      unit_of_measurement: 'm²'
       entity_id:
-        - vacuum.vacuum
-      value_template: '{{ states.vacuum.vacuum.attributes.total_cleaned_area }}'
+        - vacuum.roborock_s6
+      value_template: "{{ states('sensor.roborock_s6_total_clean_area') | float | round(2) }}"
       icon_template: 'mdi:ruler'
-    vacuum_cleanmainbrush:
-      friendly_name: Replace main brush
-      unit_of_measurement: 'h'
-      entity_id:
-        - vacuum.vacuum
-      value_template: 'Main Brush: {{ states.vacuum.vacuum.attributes.main_brush_left }}'
-      icon_template: 'mdi:screwdriver'
-    vacuum_cleansidebrush:
-      friendly_name: Replace side brush
-      unit_of_measurement: 'h'
-      entity_id:
-        - vacuum.vacuum
-      value_template: 'Side brush: {{ states.vacuum.vacuum.attributes.side_brush_left }}'
-      icon_template: 'mdi:screwdriver'
-    vacuum_cleanfilter:
-      friendly_name: Replace filter
-      unit_of_measurement: 'h'
-      entity_id:
-        - vacuum.vacuum
-      value_template: 'Filter: {{ states.vacuum.vacuum.attributes.filter_left }}'
-      icon_template: 'mdi:screwdriver'
-    vacuum_sensordirtyleft:
-      friendly_name: Replace filter
-      unit_of_measurement: 'h'
-      entity_id:
-        - vacuum.vacuum
-      value_template: 'Sensor: {{ states.vacuum.vacuum.attributes.sensor_dirty_left }}'
-      icon_template: 'mdi:screwdriver'
-    vacuum_do_not_disturb:
-      friendly_name: Do Not Disturb
-      entity_id:
-        - vacuum.vacuum
-      value_template: '{{ states.vacuum.vacuum.attributes.do_not_disturb }}'
-      icon_template: >
-        {% set val =  states.vacuum.vacuum.attributes.do_not_disturb  %}
-        {% if val == 'on' %}
-          mdi:do-not-disturb
-        {% else %}
-          mdi:do-not-disturb-off
-        {% endif %}
     vacuum_name:
       value_template: 'Odkurzacz'
 
@@ -455,7 +113,7 @@
 - platform: template
   sensors:
     harmony_name:
-      value_template: 'Aktywności'
+      value_template: 'Aktywności Harmony Hub'
 
 # Philips Hue
 - platform: template
@@ -509,21 +167,21 @@
 - platform: template
   sensors:
     serwer_qnap:
-      value_template: 'Serwer NAS'
+      value_template: 'QNAP TS-453Be'
 
-# Play Station 4 PRO
+# Raspberry Pi 4 B
 - platform: template
   sensors:
-    play_station:
-      value_template: 'Play Station'
-      
+    serwer_rpi:
+      value_template: 'Raspberry Pi 4 B'
+
 # Plex
 - platform: plex_recently_added
   name: Recently Added Movies
   token: !secret plex_token
   host: !secret plex_host
   port: !secret plex_port
-  max: 7
+  max: 4
   section_types:
     - movie
   exclude_keywords:
@@ -535,6 +193,7 @@
   token: !secret plex_token
   host: !secret plex_host
   port: !secret plex_port
+  max: 4
   section_types:
     - show
     
@@ -543,37 +202,7 @@
   api_key: !secret tautulli_api_key
   host: !secret tautulli_host
   port: !secret tautulli_port
-  
-- platform: template
-  sensors:
-    tautulli_wan_bandwidth:
-      friendly_name: "Wan Bandwidth"
-      value_template: "{{ (state_attr('sensor.tautulli', 'wan_bandwidth') / 1024) | round(2) }}"
-      unit_of_measurement: "Mbps"
-    tautulli_lan_bandwidth:
-      friendly_name: "Lan Bandwidth"
-      value_template: "{{ (state_attr('sensor.tautulli', 'lan_bandwidth') / 1024) | round(2) }}"
-      unit_of_measurement: "Mbps"
-    tautulli_total_bandwidth:
-      friendly_name: "Total Bandwidth"
-      value_template: "{{ (state_attr('sensor.tautulli', 'total_bandwidth') / 1024) | round(2) }}"
-      unit_of_measurement: "Mbps"
-    tautulli_top_user:
-      friendly_name: "Top User"
-      value_template: "{{state_attr('sensor.tautulli', 'Top User')}}"
-    tautulli_top_movie:
-      friendly_name: "Top Movie"
-      value_template: "{{state_attr('sensor.tautulli', 'Top Movie')}}"
-    tautulli_top_tv_show:
-      friendly_name: "Top TV Show"
-      value_template: "{{state_attr('sensor.tautulli', 'Top TV Show')}}"
-    tautulli_stream_count:
-      friendly_name: "Stream Count"
-      value_template: "{{state_attr('sensor.tautulli', 'stream_count')}}"
-    tautulli_stream_count_transcode:
-      friendly_name: "Stream Count Transcode"
-      value_template: "{{state_attr('sensor.tautulli', 'stream_count_transcode')}}"
-      
+
 # Yahoo finance
 - platform: template
   sensors:
@@ -716,7 +345,7 @@
 - platform: template
   sensors:
     meta_change:
-      value_template: '{{ states.sensor.yahoofinance_fb.attributes.regularMarketChangePercent}}'
+      value_template: '{{ states.sensor.yahoofinance_meta_2.attributes.regularMarketChangePercent}}'
       unit_of_measurement: '%'
       
 - platform: template

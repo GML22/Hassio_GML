@@ -54,44 +54,6 @@ yly_water:
   name: Yearly Water
   cycle: yearly
 
-# Koronawirus
-daily_coronavirus_confirmed:
-  source: sensor.poland_coronavirus_confirmed
-  cycle: daily
-weekly_coronavirus_confirmed:
-  source: sensor.poland_coronavirus_confirmed
-  cycle: weekly
-monthly_coronavirus_confirmed:
-  source: sensor.poland_coronavirus_confirmed
-  cycle: monthly
-daily_coronavirus_current:
-  source: sensor.poland_coronavirus_current
-  cycle: daily
-weekly_coronavirus_current:
-  source: sensor.poland_coronavirus_current
-  cycle: weekly
-monthly_coronavirus_current:
-  source: sensor.poland_coronavirus_current
-  cycle: monthly
-daily_coronavirus_deaths:
-  source: sensor.poland_coronavirus_deaths  
-  cycle: daily
-weekly_coronavirus_deaths:
-  source: sensor.poland_coronavirus_deaths  
-  cycle: weekly
-monthly_coronavirus_deaths:
-  source: sensor.poland_coronavirus_deaths  
-  cycle: monthly
-daily_coronavirus_recovered:
-  source: sensor.poland_coronavirus_recovered  
-  cycle: daily
-weekly_coronavirus_recovered:
-  source: sensor.poland_coronavirus_recovered   
-  cycle: weekly
-monthly_coronavirus_recovered:
-  source: sensor.poland_coronavirus_recovered   
-  cycle: monthly
-
 # Gaz zużycie
 hourly_gaz:
   source: sensor.licznik_gazu

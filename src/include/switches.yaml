@@ -4,27 +4,27 @@
     # TV
     tv:
       friendly_name: TV
-      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'TV') }}"
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Turn on TV') }}"
       turn_on:
         service: remote.turn_on
         data:
           entity_id: remote.harmony_hub
-          activity: 'TV'
+          activity: 'Turn on TV'
       turn_off:
         service: remote.turn_on
         data:
           entity_id: remote.harmony_hub
           activity: 'PowerOff'
 
-    # Movie on TV
-    tv_movie:
-      friendly_name: Movie on TV
-      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Movie on TV') }}"
+    # Optoma Movie
+    optoma_movie:
+      friendly_name: Optoma Movie
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Optoma Movie') }}"
       turn_on:
         service: remote.turn_on
         data:
           entity_id: remote.harmony_hub
-          activity: 'Movie on TV'
+          activity: 'Optoma Movie'
       turn_off:
         service: remote.turn_on
         data:
@@ -32,50 +32,34 @@
           activity: 'PowerOff'
 
     # Play Station TV
-    ps4_tv:
+    playstation_tv:
       friendly_name: Play Station TV
-      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Play Station TV') }}"
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Turn on PlayStation') }}"
       turn_on:
         service: remote.turn_on
         data:
           entity_id: remote.harmony_hub
-          activity: 'Play Station TV'
+          activity: 'Turn on PlayStation'
       turn_off:
         service: remote.turn_on
         data:
           entity_id: remote.harmony_hub
           activity: 'PowerOff'
-
-    # Play Station Optoma
-    ps4_optoma:
-      friendly_name: Play Station Optoma
-      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Play Station Optoma') }}"
+          
+    # Netflix
+    netflix:
+      friendly_name: Netflix
+      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Turn on Netflix') }}"
       turn_on:
         service: remote.turn_on
         data:
           entity_id: remote.harmony_hub
-          activity: 'Play Station Optoma'
+          activity: 'Turn on Netflix'
       turn_off:
         service: remote.turn_on
         data:
           entity_id: remote.harmony_hub
           activity: 'PowerOff'
-
-    # Raspberry Movie
-    rpi_movie:
-      friendly_name: Raspberry Movie
-      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Raspberry Movie') }}"
-      turn_on:
-        service: remote.turn_on
-        data:
-          entity_id: remote.harmony_hub
-          activity: 'Raspberry Movie'
-      turn_off:
-        service: remote.turn_on
-        data:
-          entity_id: remote.harmony_hub
-          activity: 'PowerOff'
-
 
     # Yamaha Gramophone
     yamh_grmph:
@@ -137,21 +121,6 @@
           entity_id: remote.harmony_hub
           activity: 'PowerOff'
 
-    # Chromecast
-    chromecast:
-      friendly_name: Chromecast
-      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Chromecast') }}"
-      turn_on:
-        service: remote.turn_on
-        data:
-          entity_id: remote.harmony_hub
-          activity: 'Chromecast'
-      turn_off:
-        service: remote.turn_on
-        data:
-          entity_id: remote.harmony_hub
-          activity: 'PowerOff'
-
     harmony_hub_status:
       friendly_name: Harmony Hub status
       value_template: "{{ not is_state_attr('remote.harmony_hub', 'current_activity', 'PowerOff')  }}"
@@ -186,21 +155,12 @@
           service: switch.turn_on
       turn_off:
           service: switch.turn_off
-
-    # PS4 Pro
-    ps4_status:
-      friendly_name: Play Station 4 status
-      value_template: "{{ is_state('media_player.playstation_4', 'idle')}}"
+          
+    # Raspberry Pi 4 B
+    rpi_server_status:
+      friendly_name: RPI server status
+      value_template: "{{ states('sensor.rpi_temp_gml22')|float > 0 }}"
       turn_on:
           service: switch.turn_on
       turn_off:
-          service: switch.turn_off
-
-    # Optoma GT1080e
-    optoma_status:
-      friendly_name: Optoma status
-      value_template: "{{ is_state_attr('remote.harmony_hub', 'current_activity', 'Play Station Optoma') or is_state_attr('remote.harmony_hub', 'current_activity', 'Raspberry Movie') }}"
-      turn_on:
-          service: switch.turn_on
-      turn_off:
-          service: switch.turn_off
+          service: switch.turn_off      

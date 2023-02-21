@@ -6,9 +6,14 @@ sensor: !include sensors.yaml
 frontend: !include frontend.yaml
 utility_meter: !include utility_meters.yaml
 vacuum: !include vacuums.yaml
+fan: !include fans.yaml
 switch: !include switches.yaml
 remote: !include remotes.yaml
-input_selects: !include input_selects.yaml
+media_player: !include media_players.yaml
+logger: !include loggers.yaml
+input_select: !include input_selects.yaml
+input_number: !include input_numbers.yaml
 input_boolean: !include input_booleans.yaml
 yahoofinance: !include yahoofinance.yaml
 influxdb: !include influxdb.yaml
+mqtt: !include mqtts.yaml

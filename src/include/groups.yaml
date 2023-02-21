@@ -2,12 +2,10 @@ harmony_hub:
   name: Salon Control
   entities:
     - switch.tv
-    - switch.tv_movie
-    - switch.ps4_optoma
-    - switch.ps4_tv
-    - switch.rpi_movie
+    - switch.optoma_movie
+    - switch.playstation_tv
+    - switch.netflix
     - switch.yamh_blth
     - switch.yamh_grmph
     - switch.yamh_int_radio
     - switch.yamh_radio
-    - switch.chromecast
