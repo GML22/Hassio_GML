@@ -106,9 +106,7 @@ HACS:
 * Amazon Echo Dot
 * BME280
 * BMETERS RFM-TX1.1
-* Digitus Splitter DS-50304
 * ESP8266 NodeMCU v3
-* Google Chromecast 3.0
 * Google Chromecast 4.0
 * IMST iM871A-USB
 * iNode Energy Meter - magnetometer
@@ -117,16 +115,17 @@ HACS:
 * LG F2DV5S8S1 Washer Dryer
 * Logitech Harmony Hub
 * Optoma GT1080E DLP
-* Optoma WHD200
 * Philips Hue Bridge
 * Philips Hue Motion Sensor
 * Philips Hue Smart Plug
 * Philips Hue White and Color Ambiance E27
 * Philips Hue White E27
+* Philips WiZ Color E14
 * PMS7003
 * QNAP TS-453Be
-* Sony Bravia KDL-32W655A
-* Sony PlayStation 4 Pro
+* Sony XR-55A95K
+* Sony PlayStation 5
+* Raspberry Pi 4 B
 * Xiaomi Mi Smart Antibacterial Humidifier
 * Xiaomi Mi Smart Home Hub
 * Xiaomi Mi Window and Door Sensor
