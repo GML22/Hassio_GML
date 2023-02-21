@@ -64,19 +64,25 @@ Home Assistant:
 * [OpenWeatherMap](https://www.home-assistant.io/integrations/openweathermap)
 * [Philips Hue](https://www.home-assistant.io/integrations/hue)
 * [Plex Media Server](https://www.home-assistant.io/integrations/plex)
-* [SmartThinQ LGE Sensors](https://github.com/ollo69/ha-smartthinq-sensors)
 * [Sony Bravia TV](https://www.home-assistant.io/integrations/braviatv/)
 * [Speedtest.net](https://www.home-assistant.io/integrations/speedtestdotnet)
 * [Tautulli](https://www.home-assistant.io/integrations/tautulli)
-* [Thermal Comfort](https://github.com/dolezsa/thermal_comfort)
 * [Waze Travel Time](https://www.home-assistant.io/integrations/waze_travel_time)
 * [WiZ](https://www.home-assistant.io/integrations/wiz/)
 * [Xiaomi Miio](https://www.home-assistant.io/integrations/xiaomi_miio)
 * [Yamaha MusicCast](https://www.home-assistant.io/integrations/yamaha_musiccast)
 
 HACS:
+* [Button Card](https://github.com/custom-cards/button-card)
+* [card-mod 3](https://github.com/thomasloven/lovelace-card-mod)
+* [iOS Dark Mode Theme](https://github.com/basnijholt/lovelace-ios-dark-mode-theme)
+* [layout-card](https://github.com/thomasloven/lovelace-layout-card)
+* [Lovelace RPi Monitor Card](https://github.com/ironsheep/lovelace-rpi-monitor-card)
 * [Plex Recently Added](https://github.com/custom-components/sensor.plex_recently_added)
 * [SmartThinQ LGE Sensors](https://github.com/ollo69/ha-smartthinq-sensors)
+* [Thermal Comfort](https://github.com/dolezsa/thermal_comfort)
+* [Vacuum Card](https://github.com/denysdovhan/vacuum-card)
+* [Weather Radar Card](https://github.com/Makin-Things/weather-radar-card)
 * [Yahoo Finance](https://github.com/iprak/yahoofinance)
 
 ## Add-Ons:
