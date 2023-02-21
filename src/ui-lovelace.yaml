@@ -258,7 +258,7 @@ views:
         cards:
           - type: iframe
             url: >-
-              http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/GYZftla7k/internet?orgId=1&viewPanel=2&kiosk&refresh=10s
+              http://xxx.xxx.x.xxx:xxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/GYZftla7k/internet?orgId=1&viewPanel=2&kiosk&refresh=10s
             aspect_ratio: 71%
       - title: 'Dzienne zużycie prądu i gazu:'
         type: horizontal-stack
@@ -620,7 +620,7 @@ views:
                               /local/custom-lovelace/animated_icons/battery_volt2.svg
               - type: iframe
                 url: >-
-                  http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/Huo7p_a7z/gas?orgId=1&viewPanel=2&kiosk&refresh=10s
+                  http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/Huo7p_a7z/gas?orgId=1&viewPanel=2&kiosk&refresh=10s
                 aspect_ratio: 49%
               - type: custom:vertical-stack-in-card
                 horizontal: true
@@ -952,7 +952,7 @@ views:
                     show_icon: false
           - type: iframe
             url: >-
-              http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/K_mzp_-7z/water?orgId=1&viewPanel=2&kiosk&refresh=10s
+              http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/K_mzp_-7z/water?orgId=1&viewPanel=2&kiosk&refresh=10s
             aspect_ratio: 75%
           - type: custom:vertical-stack-in-card
             horizontal: true
@@ -1231,7 +1231,7 @@ views:
                           /local/custom-lovelace/animated_icons/battery_volt2.svg
           - type: iframe
             url: >-
-              http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/ZC7Uc_ank/energy?orgId=1&viewPanel=2&kiosk&refresh=10s
+              http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/ZC7Uc_ank/energy?orgId=1&viewPanel=2&kiosk&refresh=10s
             aspect_ratio: 75%
           - type: custom:vertical-stack-in-card
             horizontal: true
@@ -1430,7 +1430,7 @@ views:
                     }
           - type: iframe
             url: >-
-              http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/geSZ5la7z/pm?orgId=1&viewPanel=2&refresh=10s&fullscreen&kiosk=1
+              http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/geSZ5la7z/pm?orgId=1&viewPanel=2&refresh=10s&fullscreen&kiosk=1
             aspect_ratio: 85%
           - type: horizontal-stack
             cards:
@@ -1634,19 +1634,19 @@ views:
                     entity_picture: /local/custom-lovelace/animated_icons/volcano_10.svg
       - type: iframe
         url: >-
-          http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/2eTb5la7k/temperature?orgId=1&viewPanel=2&kiosk&refresh=10s
+          http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/2eTb5la7k/temperature?orgId=1&viewPanel=2&kiosk&refresh=10s
         aspect_ratio: 70%
       - type: iframe
         url: >-
-          http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/6NVslQ04z/thermal-comfort-inside?orgId=1&viewPanel=6&kiosk&refresh=10s
+          http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/6NVslQ04z/thermal-comfort-inside?orgId=1&viewPanel=6&kiosk&refresh=10s
         aspect_ratio: 75%
       - type: iframe
         url: >-
-          http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/Snndtl-7k/humidity?orgId=1&viewPanel=2&kiosk&refresh=10s
+          http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/Snndtl-7k/humidity?orgId=1&viewPanel=2&kiosk&refresh=10s
         aspect_ratio: 70%
       - type: iframe
         url: >-
-          http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/9Zeot_-7z/pressure?orgId=1&viewPanel=2&kiosk&refresh=10s
+          http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/9Zeot_-7z/pressure?orgId=1&viewPanel=2&kiosk&refresh=10s
         aspect_ratio: 75%
   - theme: Backend-selected
     title: Outdoor air quality
@@ -1678,7 +1678,7 @@ views:
                     }
           - type: iframe
             url: >-
-              http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/h3nFS904z/caqi?orgId=1&viewPanel=6&refresh=10s&fullscreen&kiosk=1
+              http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/h3nFS904z/caqi?orgId=1&viewPanel=6&refresh=10s&fullscreen&kiosk=1
             aspect_ratio: 76%
           - type: custom:vertical-stack-in-card
             horizontal: true
@@ -1747,19 +1747,19 @@ views:
                     entity_picture: /local/custom-lovelace/animated_icons/industry4.svg
       - type: iframe
         url: >-
-          http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/XiqMy_a7z/co2?orgId=1&viewPanel=2&refresh=10s&fullscreen&kiosk=1
+          http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/XiqMy_a7z/co2?orgId=1&viewPanel=2&refresh=10s&fullscreen&kiosk=1
         aspect_ratio: 70%
       - type: iframe
         url: >-
-          http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/smi2qQ04k/thermal-comfort-outside?orgId=1&viewPanel=8&kiosk&refresh=10s
+          http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/smi2qQ04k/thermal-comfort-outside?orgId=1&viewPanel=8&kiosk&refresh=10s
         aspect_ratio: 75%
       - type: iframe
         url: >-
-          http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/xWWfFr04k/outdoor-pm?orgId=1&viewPanel=6&kiosk&refresh=10s
+          http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/xWWfFr04k/outdoor-pm?orgId=1&viewPanel=6&kiosk&refresh=10s
         aspect_ratio: 70%
       - type: iframe
         url: >-
-          http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/XxThcrA4k/wind?orgId=1&viewPanel=8&kiosk&refresh=10s
+          http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/XxThcrA4k/wind?orgId=1&viewPanel=8&kiosk&refresh=10s
         aspect_ratio: 75%
   - theme: Backend-selected
     icon: mdi:devices
@@ -2986,7 +2986,7 @@ views:
                 }
       - type: iframe
         url: >-
-          http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/5oijpl-7z/qnap-usage?orgId=1&viewPanel=2&kiosk&refresh=10s
+          http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/5oijpl-7z/qnap-usage?orgId=1&viewPanel=2&kiosk&refresh=10s
         aspect_ratio: 57%
       - type: custom:vertical-stack-in-card
         cards:
@@ -3901,7 +3901,7 @@ views:
                         entity_picture: /local/custom-lovelace/animated_icons/plug.svg
               - type: iframe
                 url: >-
-                  http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/cQQw__-7z/eurusd?orgId=1&viewPanel=2&kiosk&refresh=10s
+                  http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/cQQw__-7z/eurusd?orgId=1&viewPanel=2&kiosk&refresh=10s
                 aspect_ratio: 97%
       - title: 'Towary:'
         type: horizontal-stack
@@ -4088,11 +4088,11 @@ views:
                         entity_picture: /local/custom-lovelace/animated_icons/fuel.svg
               - type: iframe
                 url: >-
-                  http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/IJ7tX_-7k/gold?orgId=1&viewPanel=2&kiosk&refresh=10s
+                  http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/IJ7tX_-7k/gold?orgId=1&viewPanel=2&kiosk&refresh=10s
                 aspect_ratio: 70%
               - type: iframe
                 url: >-
-                  http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/tAtAr_a7k/ropa?orgId=1&viewPanel=2&kiosk&refresh=10s
+                  http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/tAtAr_a7k/ropa?orgId=1&viewPanel=2&kiosk&refresh=10s
                 aspect_ratio: 70%
       - title: 'Kryptowaluty:'
         type: horizontal-stack
@@ -4279,11 +4279,11 @@ views:
                         entity_picture: /local/custom-lovelace/animated_icons/doge.svg
               - type: iframe
                 url: >-
-                  http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/_bzir_-7k/sp500?orgId=1&refresh=10s&viewPanel=2&kiosk&refresh=10s
+                  http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/_bzir_-7k/sp500?orgId=1&refresh=10s&viewPanel=2&kiosk&refresh=10s
                 aspect_ratio: 70%
               - type: iframe
                 url: >-
-                  http://192.168.0.19:3000/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/9w-F_l-nz/btc?orgId=1&viewPanel=2&kiosk&refresh=10s
+                  http://xxx.xxx.x.xxx:xxxx/api/hassio_ingress/0lMpNvRDOfwJxsFMYLMonS13W6yN0MXEIj1ur2nuxbQ/d/9w-F_l-nz/btc?orgId=1&viewPanel=2&kiosk&refresh=10s
                 aspect_ratio: 70%
       - title: 'Indeksy:'
         type: horizontal-stack
