@@ -133,3 +133,5 @@ HACS:
 * Xiaomi Mi Window and Door Sensor
 * Xiaomi Roborock S6
 * Yamaha R-N602
+
+Animated icons downloaded from [loading.io](https://loading.io).
