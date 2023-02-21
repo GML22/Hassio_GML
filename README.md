@@ -97,6 +97,8 @@ HACS:
 * [Lovelace animated weather card](https://github.com/bramkragten/weather-card)
 * [Lovelace RPi Monitor Card](https://github.com/ironsheep/lovelace-rpi-monitor-card)
 * [Lovelace Vacuum Map card](https://github.com/PiotrMachowski/lovelace-xiaomi-vacuum-map-card)
+* [Mini Media Player](https://github.com/kalkih/mini-media-player)
+* [Lovelace Mini Graph Card](https://github.com/kalkih/mini-graph-card)
 * [Upcoming-Media-Card](https://github.com/custom-cards/upcoming-media-card)
 * [Vertical Stack In Card](https://github.com/ofekashery/vertical-stack-in-card)
 * [Vacuum Card](https://github.com/denysdovhan/vacuum-card)
